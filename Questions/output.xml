@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.6 on win32)" generated="20200210 15:56:17.410" rpa="false">
+<suite id="s1" name="Choferes" source="C:\Users\fabio.olivieri\RobotTesting\RobotScreenplayPatternExample\Questions\Choferes.robot">
+<test id="s1-t1" name="Control en base">
+<kw name="Connect To Database" library="DatabaseLibrary">
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to
+connect to the database using `dbName`, `dbUsername`, and `dbPassword`.</doc>
+<arguments>
+<arg>pymssql</arg>
+<arg>${gDBNameUat}</arg>
+<arg>${gDBUserUat}</arg>
+<arg>${gDBPassUat}</arg>
+<arg>${gDBHostUat}</arg>
+<arg>${gDBPortUat}</arg>
+</arguments>
+<msg timestamp="20200210 15:56:20.445" level="INFO">Connecting using : pymssql.connect(database=Yard_BB_uat, user=NEORIS\fabio.olivieri, password=Colorado8888, host=ARROSVMSQL043, port=1433) </msg>
+<status status="PASS" starttime="20200210 15:56:17.562" endtime="20200210 15:56:20.705"></status>
+</kw>
+<kw name="Query" library="DatabaseLibrary">
+<doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional
+input `sansTran` to True to run command without an explicit transaction commit or rollback.
+Set optional input `returnAsDict` to True to return values as a list of dictionaries.</doc>
+<arguments>
+<arg>SELECT * FROM T_DRIVER</arg>
+</arguments>
+<assign>
+<var>@{QueryResult}</var>
+</assign>
+<msg timestamp="20200210 15:56:20.706" level="INFO">Executing : Query  |  SELECT * FROM T_DRIVER </msg>
+<msg timestamp="20200210 15:56:20.784" level="INFO">@{QueryResult} = [ (1, 'JOSE GARCIA', '20252208578', True, 'NEORIS\\svc.vmbld11_LDC', '2019-01-10 16:49:28.9523349', None, 'ARROSVMSQL041\\repl_merge', '2019-10-08 14:31:02.3090861', None, UUID('9d670000-e217-4f2b-b7a...</msg>
+<status status="PASS" starttime="20200210 15:56:20.705" endtime="20200210 15:56:20.785"></status>
+</kw>
+<kw name="${fil} IN [ @{QueryResult} ]" type="for">
+<kw name="${fil} = (1, 'JOSE GARCIA', '20252208578', True, 'NEORIS\\svc.vmbld11_LDC', '2019-01-10 16:49:28.9523349', None, 'ARROSVMSQL041\\repl_merge', '2019-10-08 14:31:02.3090861', None, UUID('9d670000-e217-4f2b-b7a0-..." type="foritem">
+<kw name="Convert To List" library="Collections">
+<doc>Converts the given ``item`` to a Python ``list`` type.</doc>
+<arguments>
+<arg>${fil}</arg>
+</arguments>
+<assign>
+<var>${QueryRow}</var>
+</assign>
+<msg timestamp="20200210 15:56:20.786" level="INFO">${QueryRow} = [1, 'JOSE GARCIA', '20252208578', True, 'NEORIS\\svc.vmbld11_LDC', '2019-01-10 16:49:28.9523349', None, 'ARROSVMSQL041\\repl_merge', '2019-10-08 14:31:02.3090861', None, UUID('9d670000-e217-4f2b-b7a0-...</msg>
+<status status="PASS" starttime="20200210 15:56:20.785" endtime="20200210 15:56:20.786"></status>
+</kw>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${QueryRow}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${CellRow}</var>
+</assign>
+<msg timestamp="20200210 15:56:20.786" level="INFO">${CellRow} = 1</msg>
+<status status="PASS" starttime="20200210 15:56:20.786" endtime="20200210 15:56:20.786"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${CellRow}==3370</arg>
+</arguments>
+<status status="PASS" starttime="20200210 15:56:20.786" endtime="20200210 15:56:20.786"></status>
+</kw>
+<status status="PASS" starttime="20200210 15:56:20.785" endtime="20200210 15:56:20.786"></status>
+</kw>
+<kw name="${fil} = (2, 'MARIO TAVERNA', '20263008570', True, 'NEORIS\\svc.vmbld11_LDC', '2019-01-10 16:49:28.9523349', None, 'ARROSVMSQL041\\repl_merge', '2019-05-31 05:23:14.6087239', None, UUID('c0f1d4ea-e95d-4e68-870..." type="foritem">
+<kw name="Convert To List" library="Collections">
+<doc>Converts the given ``item`` to a Python ``list`` type.</doc>
+<arguments>
+<arg>${fil}</arg>
+</arguments>
+<assign>
+<var>${QueryRow}</var>
+</assign>
+<msg timestamp="20200210 15:56:20.787" level="INFO">${QueryRow} = [2, 'MARIO TAVERNA', '20263008570', True, 'NEORIS\\svc.vmbld11_LDC', '2019-01-10 16:49:28.9523349', None, 'ARROSVMSQL041\\repl_merge', '2019-05-31 05:23:14.6087239', None, UUID('c0f1d4ea-e95d-4e68-870...</msg>
+<status status="PASS" starttime="20200210 15:56:20.786" endtime="20200210 15:56:20.787"></status>
+</kw>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${QueryRow}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${CellRow}</var>
+</assign>
+<msg timestamp="20200210 15:56:20.787" level="INFO">${CellRow} = 2</msg>
+<status status="PASS" starttime="20200210 15:56:20.787" endtime="20200210 15:56:20.787"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${CellRow}==3370</arg>
+</arguments>
+<status status="PASS" starttime="20200210 15:56:20.787" endtime="20200210 15:56:20.787"></status>
+</kw>
+<status status="PASS" starttime="20200210 15:56:20.786" endtime="20200210 15:56:20.787"></status>
+</kw>
+<kw name="${fil} = (3, 'ARIEL CAPENAGUI', '20273948571', True, 'NEORIS\\svc.vmbld11_LDC', '2019-01-10 16:49:28.9523349', None, 'ARROSVMSQL041\\repl_merge', '2019-05-31 05:23:14.6087239', None, UUID('e3755584-ed3e-4cd1-9..." type="foritem">
+<kw name="Convert To List" library="Collections">
+<doc>Converts the given ``item`` to a Python ``list`` type.</doc>
+<arguments>
+<arg>${fil}</arg>
+</arguments>
+<assign>
+<var>${QueryRow}</var>
+</assign>
+<msg timestamp="20200210 15:56:20.788" level="INFO">${QueryRow} = [3, 'ARIEL CAPENAGUI', '20273948571', True, 'NEORIS\\svc.vmbld11_LDC', '2019-01-10 16:49:28.9523349', None, 'ARROSVMSQL041\\repl_merge', '2019-05-31 05:23:14.6087239', None, UUID('e3755584-ed3e-4cd1-9...</msg>
+<status status="PASS" starttime="20200210 15:56:20.787" endtime="20200210 15:56:20.788"></status>
+</kw>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${QueryRow}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${CellRow}</var>
+</assign>
+<msg timestamp="20200210 15:56:20.788" level="INFO">${CellRow} = 3</msg>
+<status status="PASS" starttime="20200210 15:56:20.788" endtime="20200210 15:56:20.788"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${CellRow}==3370</arg>
+</arguments>
+<status status="PASS" starttime="20200210 15:56:20.788" endtime="20200210 15:56:20.788"></status>
+</kw>
+<status status="PASS" starttime="20200210 15:56:20.787" endtime="20200210 15:56:20.788"></status>
+</kw>
+<kw name="${fil} = (3370, 'JOSE BUSCIGLUO', '20062572036', False, 'NEORIS\\svc.vmbld11_LDC', '2019-01-10 16:49:28.9523349', None, 'ARROSVMSQL041\\repl_merge', '2019-05-31 05:23:14.6087239', None, UUID('f3f7fb4a-3015-41a..." type="foritem">
+<kw name="Convert To List" library="Collections">
+<doc>Converts the given ``item`` to a Python ``list`` type.</doc>
+<arguments>
+<arg>${fil}</arg>
+</arguments>
+<assign>
+<var>${QueryRow}</var>
+</assign>
+<msg timestamp="20200210 15:56:20.789" level="INFO">${QueryRow} = [3370, 'JOSE BUSCIGLUO', '20062572036', False, 'NEORIS\\svc.vmbld11_LDC', '2019-01-10 16:49:28.9523349', None, 'ARROSVMSQL041\\repl_merge', '2019-05-31 05:23:14.6087239', None, UUID('f3f7fb4a-3015-41a...</msg>
+<status status="PASS" starttime="20200210 15:56:20.788" endtime="20200210 15:56:20.789"></status>
+</kw>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${QueryRow}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${CellRow}</var>
+</assign>
+<msg timestamp="20200210 15:56:20.789" level="INFO">${CellRow} = 3370</msg>
+<status status="PASS" starttime="20200210 15:56:20.789" endtime="20200210 15:56:20.789"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${CellRow}==3370</arg>
+</arguments>
+<msg timestamp="20200210 15:56:20.790" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20200210 15:56:20.789" endtime="20200210 15:56:20.790"></status>
+</kw>
+<status status="PASS" starttime="20200210 15:56:20.788" endtime="20200210 15:56:20.790"></status>
+</kw>
+<status status="PASS" starttime="20200210 15:56:20.785" endtime="20200210 15:56:20.790"></status>
+</kw>
+<kw name="Disconnect From Database" library="DatabaseLibrary">
+<doc>Disconnects from the database.</doc>
+<msg timestamp="20200210 15:56:20.790" level="INFO">Executing : Disconnect From Database</msg>
+<status status="PASS" starttime="20200210 15:56:20.790" endtime="20200210 15:56:20.791"></status>
+</kw>
+<status status="PASS" starttime="20200210 15:56:17.562" endtime="20200210 15:56:20.791" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200210 15:56:17.411" endtime="20200210 15:56:20.792"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Choferes">Choferes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

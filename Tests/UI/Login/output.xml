@@ -1,0 +1,1360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.6 on win32)" generated="20200210 16:26:56.497" rpa="false">
+<suite id="s1" name="CorrectCredentialsToTestDataDriverExcel &amp; IncorrectCredentialsToTestDataDriverScript">
+<suite id="s1-s1" name="CorrectCredentialsToTestDataDriverExcel" source="C:\Users\fabio.olivieri\RobotTesting\RobotScreenplayPatternExample\Tests\UI\Login\CorrectCredentialsToTestDataDriverExcel.robot">
+<test id="s1-s1-t1" name="TestLoginWithExcel">
+<kw name="Test Credenciales Correctas">
+<arguments>
+<arg>fabio.olivieri</arg>
+<arg>Colorado8888</arg>
+<arg>137</arg>
+</arguments>
+<kw name="Iniciar Aplicacion" library="Login">
+<arguments>
+<arg>${gWebUrlUat}</arg>
+<arg>${gBrowserChrome}</arg>
+<arg>${eUsuario}</arg>
+<arg>${eContrasenia}</arg>
+<arg>${eTerminal}</arg>
+</arguments>
+<kw name="Abrir Navegador" library="Selenium Proxy">
+<arguments>
+<arg>${aUrl}</arg>
+<arg>${aBrowser}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${aURL}</arg>
+<arg>${aBrowser}</arg>
+</arguments>
+<msg timestamp="20200210 16:26:57.067" level="INFO">Opening browser 'chrome' to base url 'http://arrosvmapp313/ldc-yard/login'.</msg>
+<status status="PASS" starttime="20200210 16:26:57.067" endtime="20200210 16:27:00.741"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:26:57.066" endtime="20200210 16:27:00.741"></status>
+</kw>
+<kw name="Indicar usuario" library="Login">
+<arguments>
+<arg>${aUsuario}</arg>
+<arg>${aContrasenia}</arg>
+</arguments>
+<kw name="Ingresar Usuario" library="Login">
+<arguments>
+<arg>${aUsuario}</arg>
+</arguments>
+<kw name="Capturar Elemento" library="Selenium Proxy">
+<arguments>
+<arg>${locTxtUsuario}</arg>
+</arguments>
+<assign>
+<var>${txtUsuario}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:00.742" endtime="20200210 16:27:00.753"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+</arguments>
+<assign>
+<var>${aElement}</var>
+</assign>
+<msg timestamp="20200210 16:27:00.753" level="INFO">${aElement} = id:usuario</msg>
+<status status="PASS" starttime="20200210 16:27:00.753" endtime="20200210 16:27:00.753"></status>
+</kw>
+<msg timestamp="20200210 16:27:00.753" level="INFO">${txtUsuario} = id:usuario</msg>
+<status status="PASS" starttime="20200210 16:27:00.742" endtime="20200210 16:27:00.753"></status>
+</kw>
+<kw name="Ingresar Texto" library="Selenium Proxy">
+<arguments>
+<arg>${txtUsuario}</arg>
+<arg>${aUser}</arg>
+</arguments>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:00.754" endtime="20200210 16:27:00.766"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+<arg>${aText}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:00.766" level="INFO">Typing text 'fabio.olivieri' into text field 'id:usuario'.</msg>
+<status status="PASS" starttime="20200210 16:27:00.766" endtime="20200210 16:27:00.859"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:00.753" endtime="20200210 16:27:00.859"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:00.742" endtime="20200210 16:27:00.859"></status>
+</kw>
+<kw name="Ingresar Contrasenia" library="Login">
+<arguments>
+<arg>${aContrasenia}</arg>
+</arguments>
+<kw name="Capturar Elemento" library="Selenium Proxy">
+<arguments>
+<arg>${locTxtContrasenia}</arg>
+</arguments>
+<assign>
+<var>${txtContrasenia}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:00.860" endtime="20200210 16:27:00.869"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+</arguments>
+<assign>
+<var>${aElement}</var>
+</assign>
+<msg timestamp="20200210 16:27:00.870" level="INFO">${aElement} = id:contrasenia</msg>
+<status status="PASS" starttime="20200210 16:27:00.869" endtime="20200210 16:27:00.870"></status>
+</kw>
+<msg timestamp="20200210 16:27:00.870" level="INFO">${txtContrasenia} = id:contrasenia</msg>
+<status status="PASS" starttime="20200210 16:27:00.859" endtime="20200210 16:27:00.870"></status>
+</kw>
+<kw name="Ingresar Password" library="Selenium Proxy">
+<arguments>
+<arg>${txtContrasenia}</arg>
+<arg>${aPass}</arg>
+</arguments>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:00.870" endtime="20200210 16:27:00.882"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+<arg>${aText}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:00.883" level="INFO">Typing password into text field 'id:contrasenia'.</msg>
+<status status="PASS" starttime="20200210 16:27:00.882" endtime="20200210 16:27:00.962"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:00.870" endtime="20200210 16:27:00.962"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:00.859" endtime="20200210 16:27:00.962"></status>
+</kw>
+<kw name="Presionar Ingresar" library="Login">
+<kw name="Capturar Elemento" library="Selenium Proxy">
+<arguments>
+<arg>${locBtnIngresar}</arg>
+</arguments>
+<assign>
+<var>${btnIngresar}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:00.963" endtime="20200210 16:27:00.973"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+</arguments>
+<assign>
+<var>${aElement}</var>
+</assign>
+<msg timestamp="20200210 16:27:00.974" level="INFO">${aElement} = xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button</msg>
+<status status="PASS" starttime="20200210 16:27:00.973" endtime="20200210 16:27:00.974"></status>
+</kw>
+<msg timestamp="20200210 16:27:00.974" level="INFO">${btnIngresar} = xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button</msg>
+<status status="PASS" starttime="20200210 16:27:00.962" endtime="20200210 16:27:00.974"></status>
+</kw>
+<kw name="Presionar Boton" library="Selenium Proxy">
+<arguments>
+<arg>${btnIngresar}</arg>
+</arguments>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:00.974" endtime="20200210 16:27:00.986"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:00.987" level="INFO">Clicking element 'xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button'.</msg>
+<status status="PASS" starttime="20200210 16:27:00.986" endtime="20200210 16:27:01.673"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:00.974" endtime="20200210 16:27:01.674"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:00.962" endtime="20200210 16:27:01.674"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:00.742" endtime="20200210 16:27:01.674"></status>
+</kw>
+<kw name="Indicar Terminal" library="Login">
+<arguments>
+<arg>${aTerminal}</arg>
+</arguments>
+<kw name="Seleccionar Terminal" library="Login">
+<arguments>
+<arg>${aTerminal}</arg>
+</arguments>
+<kw name="Capturar Elemento" library="Selenium Proxy">
+<arguments>
+<arg>${locDdlTerminal}</arg>
+</arguments>
+<assign>
+<var>${ddlTerminal}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:01.675" endtime="20200210 16:27:03.191"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+</arguments>
+<assign>
+<var>${aElement}</var>
+</assign>
+<msg timestamp="20200210 16:27:03.192" level="INFO">${aElement} = id:selectTerminal</msg>
+<status status="PASS" starttime="20200210 16:27:03.192" endtime="20200210 16:27:03.192"></status>
+</kw>
+<msg timestamp="20200210 16:27:03.192" level="INFO">${ddlTerminal} = id:selectTerminal</msg>
+<status status="PASS" starttime="20200210 16:27:01.675" endtime="20200210 16:27:03.192"></status>
+</kw>
+<kw name="Elegir Opcion Lista Por Valor" library="Selenium Proxy">
+<arguments>
+<arg>${ddlTerminal}</arg>
+<arg>${aValor}</arg>
+</arguments>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+<arg>${aValue}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:03.193" level="INFO">Selecting options from selection list 'id:selectTerminal' by value 137.</msg>
+<status status="PASS" starttime="20200210 16:27:03.192" endtime="20200210 16:27:03.251"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:03.192" endtime="20200210 16:27:03.252"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:01.674" endtime="20200210 16:27:03.252"></status>
+</kw>
+<kw name="Presionar Ingresar" library="Login">
+<kw name="Capturar Elemento" library="Selenium Proxy">
+<arguments>
+<arg>${locBtnIngresar}</arg>
+</arguments>
+<assign>
+<var>${btnIngresar}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:03.252" endtime="20200210 16:27:03.259"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+</arguments>
+<assign>
+<var>${aElement}</var>
+</assign>
+<msg timestamp="20200210 16:27:03.260" level="INFO">${aElement} = xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button</msg>
+<status status="PASS" starttime="20200210 16:27:03.259" endtime="20200210 16:27:03.260"></status>
+</kw>
+<msg timestamp="20200210 16:27:03.260" level="INFO">${btnIngresar} = xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button</msg>
+<status status="PASS" starttime="20200210 16:27:03.252" endtime="20200210 16:27:03.260"></status>
+</kw>
+<kw name="Presionar Boton" library="Selenium Proxy">
+<arguments>
+<arg>${btnIngresar}</arg>
+</arguments>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:03.260" endtime="20200210 16:27:03.273"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:03.274" level="INFO">Clicking element 'xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button'.</msg>
+<status status="PASS" starttime="20200210 16:27:03.274" endtime="20200210 16:27:03.323"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:03.260" endtime="20200210 16:27:03.323"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:03.252" endtime="20200210 16:27:03.324"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:01.674" endtime="20200210 16:27:03.324"></status>
+</kw>
+<kw name="Guardar Token" library="Login">
+<kw name="Esperar 5 segundos" library="Selenium Proxy">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${aSeconds}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:08.330" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200210 16:27:03.324" endtime="20200210 16:27:08.331"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:03.324" endtime="20200210 16:27:08.331"></status>
+</kw>
+<kw name="Devolver valor local storage" library="Selenium Proxy">
+<arguments>
+<arg>YardToken</arg>
+</arguments>
+<assign>
+<var>${localStorageToken}</var>
+</assign>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>return window.localStorage.getItem("${aConcepto}")</arg>
+</arguments>
+<assign>
+<var>${valor}</var>
+</assign>
+<msg timestamp="20200210 16:27:08.332" level="INFO">Executing JavaScript:
+return window.localStorage.getItem("YardToken")
+Without any arguments.</msg>
+<msg timestamp="20200210 16:27:08.337" level="INFO">${valor} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDIEFSR0VOVElOQSBTLkEuIiwidGV...</msg>
+<status status="PASS" starttime="20200210 16:27:08.331" endtime="20200210 16:27:08.337"></status>
+</kw>
+<msg timestamp="20200210 16:27:08.337" level="INFO">${localStorageToken} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDIEFSR0VOVElOQSBTLkEuIiwidGV...</msg>
+<status status="PASS" starttime="20200210 16:27:08.331" endtime="20200210 16:27:08.337"></status>
+</kw>
+<kw name="Concatenar textos" library="Selenium Proxy">
+<arguments>
+<arg>Bearer</arg>
+<arg>${localStorageToken}</arg>
+</arguments>
+<assign>
+<var>${BearerToken}</var>
+</assign>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${aText1}</arg>
+<arg>${aText2}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200210 16:27:08.338" level="INFO">${result} = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDIEFSR0VOVElOQSBTLkEu...</msg>
+<status status="PASS" starttime="20200210 16:27:08.338" endtime="20200210 16:27:08.338"></status>
+</kw>
+<msg timestamp="20200210 16:27:08.338" level="INFO">${BearerToken} = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDIEFSR0VOVElOQSBTLkEu...</msg>
+<status status="PASS" starttime="20200210 16:27:08.337" endtime="20200210 16:27:08.338"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${gAutToken}</arg>
+<arg>${BearerToken}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:08.339" level="INFO">${gAutToken} = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDIEFSR0VOVElOQSBTLkEu...</msg>
+<status status="PASS" starttime="20200210 16:27:08.338" endtime="20200210 16:27:08.339"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:03.324" endtime="20200210 16:27:08.339"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:26:57.066" endtime="20200210 16:27:08.339"></status>
+</kw>
+<kw name="Pagina debe contener valor" library="Selenium Proxy">
+<arguments>
+<arg>UAT</arg>
+</arguments>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${aValor}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:08.354" level="INFO">Current page contains text 'UAT'.</msg>
+<status status="PASS" starttime="20200210 16:27:08.339" endtime="20200210 16:27:08.354"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:08.339" endtime="20200210 16:27:08.354"></status>
+</kw>
+<kw name="Cerrar Pantalla" library="Selenium Proxy">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200210 16:27:08.354" endtime="20200210 16:27:10.499"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:08.354" endtime="20200210 16:27:10.499"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:26:57.065" endtime="20200210 16:27:10.500"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:26:57.065" endtime="20200210 16:27:10.501" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="TestLoginWithExcel">
+<kw name="Test Credenciales Correctas">
+<arguments>
+<arg>fabio.olivieri</arg>
+<arg>Colorado8888</arg>
+<arg>443</arg>
+</arguments>
+<kw name="Iniciar Aplicacion" library="Login">
+<arguments>
+<arg>${gWebUrlUat}</arg>
+<arg>${gBrowserChrome}</arg>
+<arg>${eUsuario}</arg>
+<arg>${eContrasenia}</arg>
+<arg>${eTerminal}</arg>
+</arguments>
+<kw name="Abrir Navegador" library="Selenium Proxy">
+<arguments>
+<arg>${aUrl}</arg>
+<arg>${aBrowser}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${aURL}</arg>
+<arg>${aBrowser}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:10.507" level="INFO">Opening browser 'chrome' to base url 'http://arrosvmapp313/ldc-yard/login'.</msg>
+<status status="PASS" starttime="20200210 16:27:10.507" endtime="20200210 16:27:14.231"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:10.506" endtime="20200210 16:27:14.232"></status>
+</kw>
+<kw name="Indicar usuario" library="Login">
+<arguments>
+<arg>${aUsuario}</arg>
+<arg>${aContrasenia}</arg>
+</arguments>
+<kw name="Ingresar Usuario" library="Login">
+<arguments>
+<arg>${aUsuario}</arg>
+</arguments>
+<kw name="Capturar Elemento" library="Selenium Proxy">
+<arguments>
+<arg>${locTxtUsuario}</arg>
+</arguments>
+<assign>
+<var>${txtUsuario}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:14.234" endtime="20200210 16:27:14.246"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+</arguments>
+<assign>
+<var>${aElement}</var>
+</assign>
+<msg timestamp="20200210 16:27:14.246" level="INFO">${aElement} = id:usuario</msg>
+<status status="PASS" starttime="20200210 16:27:14.246" endtime="20200210 16:27:14.246"></status>
+</kw>
+<msg timestamp="20200210 16:27:14.246" level="INFO">${txtUsuario} = id:usuario</msg>
+<status status="PASS" starttime="20200210 16:27:14.233" endtime="20200210 16:27:14.246"></status>
+</kw>
+<kw name="Ingresar Texto" library="Selenium Proxy">
+<arguments>
+<arg>${txtUsuario}</arg>
+<arg>${aUser}</arg>
+</arguments>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:14.247" endtime="20200210 16:27:14.259"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+<arg>${aText}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:14.260" level="INFO">Typing text 'fabio.olivieri' into text field 'id:usuario'.</msg>
+<status status="PASS" starttime="20200210 16:27:14.259" endtime="20200210 16:27:14.354"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:14.247" endtime="20200210 16:27:14.354"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:14.233" endtime="20200210 16:27:14.355"></status>
+</kw>
+<kw name="Ingresar Contrasenia" library="Login">
+<arguments>
+<arg>${aContrasenia}</arg>
+</arguments>
+<kw name="Capturar Elemento" library="Selenium Proxy">
+<arguments>
+<arg>${locTxtContrasenia}</arg>
+</arguments>
+<assign>
+<var>${txtContrasenia}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:14.356" endtime="20200210 16:27:14.366"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+</arguments>
+<assign>
+<var>${aElement}</var>
+</assign>
+<msg timestamp="20200210 16:27:14.366" level="INFO">${aElement} = id:contrasenia</msg>
+<status status="PASS" starttime="20200210 16:27:14.366" endtime="20200210 16:27:14.366"></status>
+</kw>
+<msg timestamp="20200210 16:27:14.366" level="INFO">${txtContrasenia} = id:contrasenia</msg>
+<status status="PASS" starttime="20200210 16:27:14.355" endtime="20200210 16:27:14.366"></status>
+</kw>
+<kw name="Ingresar Password" library="Selenium Proxy">
+<arguments>
+<arg>${txtContrasenia}</arg>
+<arg>${aPass}</arg>
+</arguments>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:14.367" endtime="20200210 16:27:14.378"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+<arg>${aText}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:14.379" level="INFO">Typing password into text field 'id:contrasenia'.</msg>
+<status status="PASS" starttime="20200210 16:27:14.378" endtime="20200210 16:27:14.458"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:14.366" endtime="20200210 16:27:14.458"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:14.355" endtime="20200210 16:27:14.458"></status>
+</kw>
+<kw name="Presionar Ingresar" library="Login">
+<kw name="Capturar Elemento" library="Selenium Proxy">
+<arguments>
+<arg>${locBtnIngresar}</arg>
+</arguments>
+<assign>
+<var>${btnIngresar}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:14.459" endtime="20200210 16:27:14.469"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+</arguments>
+<assign>
+<var>${aElement}</var>
+</assign>
+<msg timestamp="20200210 16:27:14.469" level="INFO">${aElement} = xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button</msg>
+<status status="PASS" starttime="20200210 16:27:14.469" endtime="20200210 16:27:14.469"></status>
+</kw>
+<msg timestamp="20200210 16:27:14.469" level="INFO">${btnIngresar} = xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button</msg>
+<status status="PASS" starttime="20200210 16:27:14.459" endtime="20200210 16:27:14.469"></status>
+</kw>
+<kw name="Presionar Boton" library="Selenium Proxy">
+<arguments>
+<arg>${btnIngresar}</arg>
+</arguments>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:14.470" endtime="20200210 16:27:14.481"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:14.482" level="INFO">Clicking element 'xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button'.</msg>
+<status status="PASS" starttime="20200210 16:27:14.481" endtime="20200210 16:27:15.248"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:14.469" endtime="20200210 16:27:15.249"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:14.458" endtime="20200210 16:27:15.249"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:14.232" endtime="20200210 16:27:15.249"></status>
+</kw>
+<kw name="Indicar Terminal" library="Login">
+<arguments>
+<arg>${aTerminal}</arg>
+</arguments>
+<kw name="Seleccionar Terminal" library="Login">
+<arguments>
+<arg>${aTerminal}</arg>
+</arguments>
+<kw name="Capturar Elemento" library="Selenium Proxy">
+<arguments>
+<arg>${locDdlTerminal}</arg>
+</arguments>
+<assign>
+<var>${ddlTerminal}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:15.251" endtime="20200210 16:27:15.474"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+</arguments>
+<assign>
+<var>${aElement}</var>
+</assign>
+<msg timestamp="20200210 16:27:15.475" level="INFO">${aElement} = id:selectTerminal</msg>
+<status status="PASS" starttime="20200210 16:27:15.474" endtime="20200210 16:27:15.475"></status>
+</kw>
+<msg timestamp="20200210 16:27:15.475" level="INFO">${ddlTerminal} = id:selectTerminal</msg>
+<status status="PASS" starttime="20200210 16:27:15.251" endtime="20200210 16:27:15.475"></status>
+</kw>
+<kw name="Elegir Opcion Lista Por Valor" library="Selenium Proxy">
+<arguments>
+<arg>${ddlTerminal}</arg>
+<arg>${aValor}</arg>
+</arguments>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+<arg>${aValue}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:15.475" level="INFO">Selecting options from selection list 'id:selectTerminal' by value 443.</msg>
+<status status="PASS" starttime="20200210 16:27:15.475" endtime="20200210 16:27:15.529"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:15.475" endtime="20200210 16:27:15.529"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:15.250" endtime="20200210 16:27:15.529"></status>
+</kw>
+<kw name="Presionar Ingresar" library="Login">
+<kw name="Capturar Elemento" library="Selenium Proxy">
+<arguments>
+<arg>${locBtnIngresar}</arg>
+</arguments>
+<assign>
+<var>${btnIngresar}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:15.530" endtime="20200210 16:27:15.536"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+</arguments>
+<assign>
+<var>${aElement}</var>
+</assign>
+<msg timestamp="20200210 16:27:15.536" level="INFO">${aElement} = xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button</msg>
+<status status="PASS" starttime="20200210 16:27:15.536" endtime="20200210 16:27:15.536"></status>
+</kw>
+<msg timestamp="20200210 16:27:15.536" level="INFO">${btnIngresar} = xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button</msg>
+<status status="PASS" starttime="20200210 16:27:15.530" endtime="20200210 16:27:15.536"></status>
+</kw>
+<kw name="Presionar Boton" library="Selenium Proxy">
+<arguments>
+<arg>${btnIngresar}</arg>
+</arguments>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:15.537" endtime="20200210 16:27:15.548"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:15.549" level="INFO">Clicking element 'xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button'.</msg>
+<status status="PASS" starttime="20200210 16:27:15.549" endtime="20200210 16:27:15.778"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:15.537" endtime="20200210 16:27:15.778"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:15.529" endtime="20200210 16:27:15.778"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:15.249" endtime="20200210 16:27:15.778"></status>
+</kw>
+<kw name="Guardar Token" library="Login">
+<kw name="Esperar 5 segundos" library="Selenium Proxy">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${aSeconds}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:20.780" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200210 16:27:15.779" endtime="20200210 16:27:20.780"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:15.779" endtime="20200210 16:27:20.780"></status>
+</kw>
+<kw name="Devolver valor local storage" library="Selenium Proxy">
+<arguments>
+<arg>YardToken</arg>
+</arguments>
+<assign>
+<var>${localStorageToken}</var>
+</assign>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>return window.localStorage.getItem("${aConcepto}")</arg>
+</arguments>
+<assign>
+<var>${valor}</var>
+</assign>
+<msg timestamp="20200210 16:27:20.781" level="INFO">Executing JavaScript:
+return window.localStorage.getItem("YardToken")
+Without any arguments.</msg>
+<msg timestamp="20200210 16:27:20.786" level="INFO">${valor} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjoxLCJzaXRlaWQiOjI5LCJzaXRlX2FsaWFzIjoxOCwic2l0ZV9uYW1lIjoiQmFow61hIEJsYW5jYSIsInNpdGVfd2giOmZhbHNlLCJzb2NpZCI6MSwic29jX25hbWUiOiJMREMgQVJHRU5USU5BIFM...</msg>
+<status status="PASS" starttime="20200210 16:27:20.780" endtime="20200210 16:27:20.786"></status>
+</kw>
+<msg timestamp="20200210 16:27:20.786" level="INFO">${localStorageToken} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjoxLCJzaXRlaWQiOjI5LCJzaXRlX2FsaWFzIjoxOCwic2l0ZV9uYW1lIjoiQmFow61hIEJsYW5jYSIsInNpdGVfd2giOmZhbHNlLCJzb2NpZCI6MSwic29jX25hbWUiOiJMREMgQVJHRU5USU5BIFM...</msg>
+<status status="PASS" starttime="20200210 16:27:20.780" endtime="20200210 16:27:20.786"></status>
+</kw>
+<kw name="Concatenar textos" library="Selenium Proxy">
+<arguments>
+<arg>Bearer</arg>
+<arg>${localStorageToken}</arg>
+</arguments>
+<assign>
+<var>${BearerToken}</var>
+</assign>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${aText1}</arg>
+<arg>${aText2}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200210 16:27:20.786" level="INFO">${result} = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjoxLCJzaXRlaWQiOjI5LCJzaXRlX2FsaWFzIjoxOCwic2l0ZV9uYW1lIjoiQmFow61hIEJsYW5jYSIsInNpdGVfd2giOmZhbHNlLCJzb2NpZCI6MSwic29jX25hbWUiOiJMREMgQVJHRU5U...</msg>
+<status status="PASS" starttime="20200210 16:27:20.786" endtime="20200210 16:27:20.787"></status>
+</kw>
+<msg timestamp="20200210 16:27:20.787" level="INFO">${BearerToken} = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjoxLCJzaXRlaWQiOjI5LCJzaXRlX2FsaWFzIjoxOCwic2l0ZV9uYW1lIjoiQmFow61hIEJsYW5jYSIsInNpdGVfd2giOmZhbHNlLCJzb2NpZCI6MSwic29jX25hbWUiOiJMREMgQVJHRU5U...</msg>
+<status status="PASS" starttime="20200210 16:27:20.786" endtime="20200210 16:27:20.787"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${gAutToken}</arg>
+<arg>${BearerToken}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:20.787" level="INFO">${gAutToken} = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjoxLCJzaXRlaWQiOjI5LCJzaXRlX2FsaWFzIjoxOCwic2l0ZV9uYW1lIjoiQmFow61hIEJsYW5jYSIsInNpdGVfd2giOmZhbHNlLCJzb2NpZCI6MSwic29jX25hbWUiOiJMREMgQVJHRU5U...</msg>
+<status status="PASS" starttime="20200210 16:27:20.787" endtime="20200210 16:27:20.787"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:15.778" endtime="20200210 16:27:20.787"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:10.505" endtime="20200210 16:27:20.787"></status>
+</kw>
+<kw name="Pagina debe contener valor" library="Selenium Proxy">
+<arguments>
+<arg>UAT</arg>
+</arguments>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${aValor}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:20.801" level="INFO">Current page contains text 'UAT'.</msg>
+<status status="PASS" starttime="20200210 16:27:20.788" endtime="20200210 16:27:20.801"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:20.787" endtime="20200210 16:27:20.801"></status>
+</kw>
+<kw name="Cerrar Pantalla" library="Selenium Proxy">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200210 16:27:20.802" endtime="20200210 16:27:22.911"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:20.802" endtime="20200210 16:27:22.911"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:10.504" endtime="20200210 16:27:22.911"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:10.504" endtime="20200210 16:27:22.912" critical="yes"></status>
+</test>
+<kw name="Cerrar Todo" library="Selenium Proxy" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200210 16:27:22.915" endtime="20200210 16:27:22.915"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:22.914" endtime="20200210 16:27:22.915"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:26:56.521" endtime="20200210 16:27:22.915"></status>
+</suite>
+<suite id="s1-s2" name="IncorrectCredentialsToTestDataDriverScript" source="C:\Users\fabio.olivieri\RobotTesting\RobotScreenplayPatternExample\Tests\UI\Login\IncorrectCredentialsToTestDataDriverScript.robot">
+<kw name="Abrir Navegador" library="Selenium Proxy" type="setup">
+<arguments>
+<arg>${gWebUrlUat}</arg>
+<arg>${gBrowserChrome}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${aURL}</arg>
+<arg>${aBrowser}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:22.940" level="INFO">Opening browser 'chrome' to base url 'http://arrosvmapp313/ldc-yard/login'.</msg>
+<status status="PASS" starttime="20200210 16:27:22.940" endtime="20200210 16:27:27.495"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:22.939" endtime="20200210 16:27:27.495"></status>
+</kw>
+<test id="s1-s2-t1" name="ok Timbues">
+<kw name="Test Credenciales Incorrectas">
+<arguments>
+<arg>fabio.olivieri</arg>
+<arg>Colorado111</arg>
+</arguments>
+<kw name="Indicar usuario" library="Login">
+<arguments>
+<arg>${usuario}</arg>
+<arg>${contrasenia}</arg>
+</arguments>
+<kw name="Ingresar Usuario" library="Login">
+<arguments>
+<arg>${aUsuario}</arg>
+</arguments>
+<kw name="Capturar Elemento" library="Selenium Proxy">
+<arguments>
+<arg>${locTxtUsuario}</arg>
+</arguments>
+<assign>
+<var>${txtUsuario}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:27.497" endtime="20200210 16:27:27.512"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+</arguments>
+<assign>
+<var>${aElement}</var>
+</assign>
+<msg timestamp="20200210 16:27:27.512" level="INFO">${aElement} = id:usuario</msg>
+<status status="PASS" starttime="20200210 16:27:27.512" endtime="20200210 16:27:27.512"></status>
+</kw>
+<msg timestamp="20200210 16:27:27.513" level="INFO">${txtUsuario} = id:usuario</msg>
+<status status="PASS" starttime="20200210 16:27:27.497" endtime="20200210 16:27:27.513"></status>
+</kw>
+<kw name="Ingresar Texto" library="Selenium Proxy">
+<arguments>
+<arg>${txtUsuario}</arg>
+<arg>${aUser}</arg>
+</arguments>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:27.513" endtime="20200210 16:27:27.527"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+<arg>${aText}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:27.527" level="INFO">Typing text 'fabio.olivieri' into text field 'id:usuario'.</msg>
+<status status="PASS" starttime="20200210 16:27:27.527" endtime="20200210 16:27:27.622"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:27.513" endtime="20200210 16:27:27.622"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:27.497" endtime="20200210 16:27:27.622"></status>
+</kw>
+<kw name="Ingresar Contrasenia" library="Login">
+<arguments>
+<arg>${aContrasenia}</arg>
+</arguments>
+<kw name="Capturar Elemento" library="Selenium Proxy">
+<arguments>
+<arg>${locTxtContrasenia}</arg>
+</arguments>
+<assign>
+<var>${txtContrasenia}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:27.623" endtime="20200210 16:27:27.634"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+</arguments>
+<assign>
+<var>${aElement}</var>
+</assign>
+<msg timestamp="20200210 16:27:27.635" level="INFO">${aElement} = id:contrasenia</msg>
+<status status="PASS" starttime="20200210 16:27:27.634" endtime="20200210 16:27:27.635"></status>
+</kw>
+<msg timestamp="20200210 16:27:27.635" level="INFO">${txtContrasenia} = id:contrasenia</msg>
+<status status="PASS" starttime="20200210 16:27:27.623" endtime="20200210 16:27:27.635"></status>
+</kw>
+<kw name="Ingresar Password" library="Selenium Proxy">
+<arguments>
+<arg>${txtContrasenia}</arg>
+<arg>${aPass}</arg>
+</arguments>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:27.635" endtime="20200210 16:27:27.647"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+<arg>${aText}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:27.647" level="INFO">Typing password into text field 'id:contrasenia'.</msg>
+<status status="PASS" starttime="20200210 16:27:27.647" endtime="20200210 16:27:27.724"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:27.635" endtime="20200210 16:27:27.724"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:27.623" endtime="20200210 16:27:27.724"></status>
+</kw>
+<kw name="Presionar Ingresar" library="Login">
+<kw name="Capturar Elemento" library="Selenium Proxy">
+<arguments>
+<arg>${locBtnIngresar}</arg>
+</arguments>
+<assign>
+<var>${btnIngresar}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:27.725" endtime="20200210 16:27:27.737"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+</arguments>
+<assign>
+<var>${aElement}</var>
+</assign>
+<msg timestamp="20200210 16:27:27.737" level="INFO">${aElement} = xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button</msg>
+<status status="PASS" starttime="20200210 16:27:27.737" endtime="20200210 16:27:27.737"></status>
+</kw>
+<msg timestamp="20200210 16:27:27.737" level="INFO">${btnIngresar} = xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button</msg>
+<status status="PASS" starttime="20200210 16:27:27.724" endtime="20200210 16:27:27.737"></status>
+</kw>
+<kw name="Presionar Boton" library="Selenium Proxy">
+<arguments>
+<arg>${btnIngresar}</arg>
+</arguments>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:27.738" endtime="20200210 16:27:27.748"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:27.748" level="INFO">Clicking element 'xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button'.</msg>
+<status status="PASS" starttime="20200210 16:27:27.748" endtime="20200210 16:27:28.212"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:27.737" endtime="20200210 16:27:28.213"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:27.724" endtime="20200210 16:27:28.213"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:27.496" endtime="20200210 16:27:28.213"></status>
+</kw>
+<kw name="Validar mensaje" library="Login">
+<arguments>
+<arg>Credenciales incorrectas</arg>
+</arguments>
+<kw name="Capturar Elemento" library="Selenium Proxy">
+<arguments>
+<arg>${locMensajes}</arg>
+</arguments>
+<assign>
+<var>${lblMensaje}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:28.214" endtime="20200210 16:27:28.849"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+</arguments>
+<assign>
+<var>${aElement}</var>
+</assign>
+<msg timestamp="20200210 16:27:28.850" level="INFO">${aElement} = xpath://*[@id="toast-container"]</msg>
+<status status="PASS" starttime="20200210 16:27:28.849" endtime="20200210 16:27:28.850"></status>
+</kw>
+<msg timestamp="20200210 16:27:28.850" level="INFO">${lblMensaje} = xpath://*[@id="toast-container"]</msg>
+<status status="PASS" starttime="20200210 16:27:28.213" endtime="20200210 16:27:28.850"></status>
+</kw>
+<kw name="Elemento debe contener valor" library="Selenium Proxy">
+<arguments>
+<arg>${lblMensaje}</arg>
+<arg>${aMsj}</arg>
+</arguments>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>${aValor}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:28.869" level="INFO">Element 'xpath://*[@id="toast-container"]' contains text 'Credenciales incorrectas'.</msg>
+<status status="PASS" starttime="20200210 16:27:28.850" endtime="20200210 16:27:28.869"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:28.850" endtime="20200210 16:27:28.869"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:28.213" endtime="20200210 16:27:28.869"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:27.496" endtime="20200210 16:27:28.869"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:27.495" endtime="20200210 16:27:28.870" critical="yes"></status>
+</test>
+<test id="s1-s2-t2" name="ok BB">
+<kw name="Test Credenciales Incorrectas">
+<arguments>
+<arg>faboo.olivieri</arg>
+<arg>Colorado8888</arg>
+</arguments>
+<kw name="Indicar usuario" library="Login">
+<arguments>
+<arg>${usuario}</arg>
+<arg>${contrasenia}</arg>
+</arguments>
+<kw name="Ingresar Usuario" library="Login">
+<arguments>
+<arg>${aUsuario}</arg>
+</arguments>
+<kw name="Capturar Elemento" library="Selenium Proxy">
+<arguments>
+<arg>${locTxtUsuario}</arg>
+</arguments>
+<assign>
+<var>${txtUsuario}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:28.872" endtime="20200210 16:27:28.878"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+</arguments>
+<assign>
+<var>${aElement}</var>
+</assign>
+<msg timestamp="20200210 16:27:28.879" level="INFO">${aElement} = id:usuario</msg>
+<status status="PASS" starttime="20200210 16:27:28.878" endtime="20200210 16:27:28.879"></status>
+</kw>
+<msg timestamp="20200210 16:27:28.879" level="INFO">${txtUsuario} = id:usuario</msg>
+<status status="PASS" starttime="20200210 16:27:28.871" endtime="20200210 16:27:28.879"></status>
+</kw>
+<kw name="Ingresar Texto" library="Selenium Proxy">
+<arguments>
+<arg>${txtUsuario}</arg>
+<arg>${aUser}</arg>
+</arguments>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:28.879" endtime="20200210 16:27:28.890"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+<arg>${aText}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:28.891" level="INFO">Typing text 'faboo.olivieri' into text field 'id:usuario'.</msg>
+<status status="PASS" starttime="20200210 16:27:28.890" endtime="20200210 16:27:29.002"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:28.879" endtime="20200210 16:27:29.002"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:28.871" endtime="20200210 16:27:29.002"></status>
+</kw>
+<kw name="Ingresar Contrasenia" library="Login">
+<arguments>
+<arg>${aContrasenia}</arg>
+</arguments>
+<kw name="Capturar Elemento" library="Selenium Proxy">
+<arguments>
+<arg>${locTxtContrasenia}</arg>
+</arguments>
+<assign>
+<var>${txtContrasenia}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:29.003" endtime="20200210 16:27:29.009"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+</arguments>
+<assign>
+<var>${aElement}</var>
+</assign>
+<msg timestamp="20200210 16:27:29.009" level="INFO">${aElement} = id:contrasenia</msg>
+<status status="PASS" starttime="20200210 16:27:29.009" endtime="20200210 16:27:29.009"></status>
+</kw>
+<msg timestamp="20200210 16:27:29.010" level="INFO">${txtContrasenia} = id:contrasenia</msg>
+<status status="PASS" starttime="20200210 16:27:29.003" endtime="20200210 16:27:29.010"></status>
+</kw>
+<kw name="Ingresar Password" library="Selenium Proxy">
+<arguments>
+<arg>${txtContrasenia}</arg>
+<arg>${aPass}</arg>
+</arguments>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:29.010" endtime="20200210 16:27:29.020"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+<arg>${aText}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:29.021" level="INFO">Typing password into text field 'id:contrasenia'.</msg>
+<status status="PASS" starttime="20200210 16:27:29.020" endtime="20200210 16:27:29.090"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:29.010" endtime="20200210 16:27:29.090"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:29.002" endtime="20200210 16:27:29.090"></status>
+</kw>
+<kw name="Presionar Ingresar" library="Login">
+<kw name="Capturar Elemento" library="Selenium Proxy">
+<arguments>
+<arg>${locBtnIngresar}</arg>
+</arguments>
+<assign>
+<var>${btnIngresar}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:29.091" endtime="20200210 16:27:29.097"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+</arguments>
+<assign>
+<var>${aElement}</var>
+</assign>
+<msg timestamp="20200210 16:27:29.097" level="INFO">${aElement} = xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button</msg>
+<status status="PASS" starttime="20200210 16:27:29.097" endtime="20200210 16:27:29.097"></status>
+</kw>
+<msg timestamp="20200210 16:27:29.097" level="INFO">${btnIngresar} = xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button</msg>
+<status status="PASS" starttime="20200210 16:27:29.090" endtime="20200210 16:27:29.097"></status>
+</kw>
+<kw name="Presionar Boton" library="Selenium Proxy">
+<arguments>
+<arg>${btnIngresar}</arg>
+</arguments>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:29.098" endtime="20200210 16:27:29.107"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:29.107" level="INFO">Clicking element 'xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button'.</msg>
+<status status="PASS" starttime="20200210 16:27:29.107" endtime="20200210 16:27:29.475"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:29.098" endtime="20200210 16:27:29.475"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:29.090" endtime="20200210 16:27:29.475"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:28.871" endtime="20200210 16:27:29.475"></status>
+</kw>
+<kw name="Validar mensaje" library="Login">
+<arguments>
+<arg>Credenciales incorrectas</arg>
+</arguments>
+<kw name="Capturar Elemento" library="Selenium Proxy">
+<arguments>
+<arg>${locMensajes}</arg>
+</arguments>
+<assign>
+<var>${lblMensaje}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:27:29.476" endtime="20200210 16:27:29.485"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+</arguments>
+<assign>
+<var>${aElement}</var>
+</assign>
+<msg timestamp="20200210 16:27:29.486" level="INFO">${aElement} = xpath://*[@id="toast-container"]</msg>
+<status status="PASS" starttime="20200210 16:27:29.485" endtime="20200210 16:27:29.486"></status>
+</kw>
+<msg timestamp="20200210 16:27:29.486" level="INFO">${lblMensaje} = xpath://*[@id="toast-container"]</msg>
+<status status="PASS" starttime="20200210 16:27:29.476" endtime="20200210 16:27:29.486"></status>
+</kw>
+<kw name="Elemento debe contener valor" library="Selenium Proxy">
+<arguments>
+<arg>${lblMensaje}</arg>
+<arg>${aMsj}</arg>
+</arguments>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>${aValor}</arg>
+</arguments>
+<msg timestamp="20200210 16:27:29.503" level="INFO">Element 'xpath://*[@id="toast-container"]' contains text 'Credenciales incorrectas'.</msg>
+<status status="PASS" starttime="20200210 16:27:29.486" endtime="20200210 16:27:29.504"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:29.486" endtime="20200210 16:27:29.504"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:29.475" endtime="20200210 16:27:29.504"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:28.870" endtime="20200210 16:27:29.504"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:28.870" endtime="20200210 16:27:29.504" critical="yes"></status>
+</test>
+<kw name="Cerrar Todo" library="Selenium Proxy" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200210 16:27:29.505" endtime="20200210 16:27:31.594"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:29.505" endtime="20200210 16:27:31.594"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:27:22.920" endtime="20200210 16:27:31.594"></status>
+</suite>
+<status status="PASS" starttime="20200210 16:26:56.499" endtime="20200210 16:27:31.597"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0">Critical Tests</stat>
+<stat pass="4" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" id="s1" name="CorrectCredentialsToTestDataDriverExcel &amp; IncorrectCredentialsToTestDataDriverScript">CorrectCredentialsToTestDataDriverExcel &amp; IncorrectCredentialsToTestDataDriverScript</stat>
+<stat pass="2" fail="0" id="s1-s1" name="CorrectCredentialsToTestDataDriverExcel">CorrectCredentialsToTestDataDriverExcel &amp; IncorrectCredentialsToTestDataDriverScript.CorrectCredentialsToTestDataDriverExcel</stat>
+<stat pass="2" fail="0" id="s1-s2" name="IncorrectCredentialsToTestDataDriverScript">CorrectCredentialsToTestDataDriverExcel &amp; IncorrectCredentialsToTestDataDriverScript.IncorrectCredentialsToTestDataDriverScript</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200210 16:27:10.503" level="WARN">Multiple test cases with name 'TestLoginWithExcel' executed in test suite 'CorrectCredentialsToTestDataDriverExcel &amp; IncorrectCredentialsToTestDataDriverScript.CorrectCredentialsToTestDataDriverExcel'.</msg>
+</errors>
+</robot>

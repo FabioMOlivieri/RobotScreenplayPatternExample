@@ -1,0 +1,2132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.6 on win32)" generated="20200210 16:38:19.420" rpa="false">
+<suite id="s1" name="Choferes" source="C:\Users\fabio.olivieri\RobotTesting\RobotScreenplayPatternExample\Tests\Business\Choferes.robot">
+<kw name="Iniciar Aplicacion" library="Login" type="setup">
+<arguments>
+<arg>${gWebUrlUat}</arg>
+<arg>${gBrowserChrome}</arg>
+<arg>${gUser}</arg>
+<arg>${gContrasenia}</arg>
+<arg>${gIDTerminalTimbues}</arg>
+</arguments>
+<kw name="Abrir Navegador" library="Selenium Proxy">
+<arguments>
+<arg>${aUrl}</arg>
+<arg>${aBrowser}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${aURL}</arg>
+<arg>${aBrowser}</arg>
+</arguments>
+<msg timestamp="20200210 16:38:19.746" level="INFO">Opening browser 'headlesschrome' to base url 'http://arrosvmapp313/ldc-yard/login'.</msg>
+<status status="PASS" starttime="20200210 16:38:19.746" endtime="20200210 16:38:24.098"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:19.746" endtime="20200210 16:38:24.098"></status>
+</kw>
+<kw name="Indicar usuario" library="Login">
+<arguments>
+<arg>${aUsuario}</arg>
+<arg>${aContrasenia}</arg>
+</arguments>
+<kw name="Ingresar Usuario" library="Login">
+<arguments>
+<arg>${aUsuario}</arg>
+</arguments>
+<kw name="Capturar Elemento" library="Selenium Proxy">
+<arguments>
+<arg>${locTxtUsuario}</arg>
+</arguments>
+<assign>
+<var>${txtUsuario}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:24.099" endtime="20200210 16:38:24.113"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+</arguments>
+<assign>
+<var>${aElement}</var>
+</assign>
+<msg timestamp="20200210 16:38:24.113" level="INFO">${aElement} = id:usuario</msg>
+<status status="PASS" starttime="20200210 16:38:24.113" endtime="20200210 16:38:24.113"></status>
+</kw>
+<msg timestamp="20200210 16:38:24.114" level="INFO">${txtUsuario} = id:usuario</msg>
+<status status="PASS" starttime="20200210 16:38:24.099" endtime="20200210 16:38:24.114"></status>
+</kw>
+<kw name="Ingresar Texto" library="Selenium Proxy">
+<arguments>
+<arg>${txtUsuario}</arg>
+<arg>${aUser}</arg>
+</arguments>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:24.114" endtime="20200210 16:38:24.124"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+<arg>${aText}</arg>
+</arguments>
+<msg timestamp="20200210 16:38:24.125" level="INFO">Typing text 'fabio.olivieri' into text field 'id:usuario'.</msg>
+<status status="PASS" starttime="20200210 16:38:24.125" endtime="20200210 16:38:24.205"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:24.114" endtime="20200210 16:38:24.205"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:24.099" endtime="20200210 16:38:24.205"></status>
+</kw>
+<kw name="Ingresar Contrasenia" library="Login">
+<arguments>
+<arg>${aContrasenia}</arg>
+</arguments>
+<kw name="Capturar Elemento" library="Selenium Proxy">
+<arguments>
+<arg>${locTxtContrasenia}</arg>
+</arguments>
+<assign>
+<var>${txtContrasenia}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:24.205" endtime="20200210 16:38:24.216"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+</arguments>
+<assign>
+<var>${aElement}</var>
+</assign>
+<msg timestamp="20200210 16:38:24.217" level="INFO">${aElement} = id:contrasenia</msg>
+<status status="PASS" starttime="20200210 16:38:24.216" endtime="20200210 16:38:24.217"></status>
+</kw>
+<msg timestamp="20200210 16:38:24.217" level="INFO">${txtContrasenia} = id:contrasenia</msg>
+<status status="PASS" starttime="20200210 16:38:24.205" endtime="20200210 16:38:24.217"></status>
+</kw>
+<kw name="Ingresar Password" library="Selenium Proxy">
+<arguments>
+<arg>${txtContrasenia}</arg>
+<arg>${aPass}</arg>
+</arguments>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:24.217" endtime="20200210 16:38:24.229"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+<arg>${aText}</arg>
+</arguments>
+<msg timestamp="20200210 16:38:24.229" level="INFO">Typing password into text field 'id:contrasenia'.</msg>
+<status status="PASS" starttime="20200210 16:38:24.229" endtime="20200210 16:38:24.318"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:24.217" endtime="20200210 16:38:24.318"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:24.205" endtime="20200210 16:38:24.318"></status>
+</kw>
+<kw name="Presionar Ingresar" library="Login">
+<kw name="Capturar Elemento" library="Selenium Proxy">
+<arguments>
+<arg>${locBtnIngresar}</arg>
+</arguments>
+<assign>
+<var>${btnIngresar}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:24.319" endtime="20200210 16:38:24.330"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+</arguments>
+<assign>
+<var>${aElement}</var>
+</assign>
+<msg timestamp="20200210 16:38:24.331" level="INFO">${aElement} = xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button</msg>
+<status status="PASS" starttime="20200210 16:38:24.330" endtime="20200210 16:38:24.331"></status>
+</kw>
+<msg timestamp="20200210 16:38:24.331" level="INFO">${btnIngresar} = xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button</msg>
+<status status="PASS" starttime="20200210 16:38:24.319" endtime="20200210 16:38:24.331"></status>
+</kw>
+<kw name="Presionar Boton" library="Selenium Proxy">
+<arguments>
+<arg>${btnIngresar}</arg>
+</arguments>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:24.331" endtime="20200210 16:38:24.342"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<msg timestamp="20200210 16:38:24.343" level="INFO">Clicking element 'xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button'.</msg>
+<status status="PASS" starttime="20200210 16:38:24.343" endtime="20200210 16:38:24.408"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:24.331" endtime="20200210 16:38:24.409"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:24.318" endtime="20200210 16:38:24.409"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:24.098" endtime="20200210 16:38:24.409"></status>
+</kw>
+<kw name="Indicar Terminal" library="Login">
+<arguments>
+<arg>${aTerminal}</arg>
+</arguments>
+<kw name="Seleccionar Terminal" library="Login">
+<arguments>
+<arg>${aTerminal}</arg>
+</arguments>
+<kw name="Capturar Elemento" library="Selenium Proxy">
+<arguments>
+<arg>${locDdlTerminal}</arg>
+</arguments>
+<assign>
+<var>${ddlTerminal}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:24.410" endtime="20200210 16:38:24.631"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+</arguments>
+<assign>
+<var>${aElement}</var>
+</assign>
+<msg timestamp="20200210 16:38:24.632" level="INFO">${aElement} = id:selectTerminal</msg>
+<status status="PASS" starttime="20200210 16:38:24.631" endtime="20200210 16:38:24.632"></status>
+</kw>
+<msg timestamp="20200210 16:38:24.632" level="INFO">${ddlTerminal} = id:selectTerminal</msg>
+<status status="PASS" starttime="20200210 16:38:24.410" endtime="20200210 16:38:24.632"></status>
+</kw>
+<kw name="Elegir Opcion Lista Por Valor" library="Selenium Proxy">
+<arguments>
+<arg>${ddlTerminal}</arg>
+<arg>${aValor}</arg>
+</arguments>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+<arg>${aValue}</arg>
+</arguments>
+<msg timestamp="20200210 16:38:24.633" level="INFO">Selecting options from selection list 'id:selectTerminal' by value 137.</msg>
+<status status="PASS" starttime="20200210 16:38:24.632" endtime="20200210 16:38:24.687"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:24.632" endtime="20200210 16:38:24.687"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:24.409" endtime="20200210 16:38:24.687"></status>
+</kw>
+<kw name="Presionar Ingresar" library="Login">
+<kw name="Capturar Elemento" library="Selenium Proxy">
+<arguments>
+<arg>${locBtnIngresar}</arg>
+</arguments>
+<assign>
+<var>${btnIngresar}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:24.688" endtime="20200210 16:38:24.694"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+</arguments>
+<assign>
+<var>${aElement}</var>
+</assign>
+<msg timestamp="20200210 16:38:24.694" level="INFO">${aElement} = xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button</msg>
+<status status="PASS" starttime="20200210 16:38:24.694" endtime="20200210 16:38:24.694"></status>
+</kw>
+<msg timestamp="20200210 16:38:24.694" level="INFO">${btnIngresar} = xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button</msg>
+<status status="PASS" starttime="20200210 16:38:24.687" endtime="20200210 16:38:24.694"></status>
+</kw>
+<kw name="Presionar Boton" library="Selenium Proxy">
+<arguments>
+<arg>${btnIngresar}</arg>
+</arguments>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:24.695" endtime="20200210 16:38:24.707"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<msg timestamp="20200210 16:38:24.707" level="INFO">Clicking element 'xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button'.</msg>
+<status status="PASS" starttime="20200210 16:38:24.707" endtime="20200210 16:38:24.753"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:24.694" endtime="20200210 16:38:24.753"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:24.687" endtime="20200210 16:38:24.753"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:24.409" endtime="20200210 16:38:24.753"></status>
+</kw>
+<kw name="Guardar Token" library="Login">
+<kw name="Esperar 5 segundos" library="Selenium Proxy">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${aSeconds}</arg>
+</arguments>
+<msg timestamp="20200210 16:38:29.757" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200210 16:38:24.754" endtime="20200210 16:38:29.758"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:24.754" endtime="20200210 16:38:29.758"></status>
+</kw>
+<kw name="Devolver valor local storage" library="Selenium Proxy">
+<arguments>
+<arg>YardToken</arg>
+</arguments>
+<assign>
+<var>${localStorageToken}</var>
+</assign>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>return window.localStorage.getItem("${aConcepto}")</arg>
+</arguments>
+<assign>
+<var>${valor}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.759" level="INFO">Executing JavaScript:
+return window.localStorage.getItem("YardToken")
+Without any arguments.</msg>
+<msg timestamp="20200210 16:38:29.764" level="INFO">${valor} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDIEFSR0VOVElOQSBTLkEuIiwidGV...</msg>
+<status status="PASS" starttime="20200210 16:38:29.758" endtime="20200210 16:38:29.764"></status>
+</kw>
+<msg timestamp="20200210 16:38:29.765" level="INFO">${localStorageToken} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDIEFSR0VOVElOQSBTLkEuIiwidGV...</msg>
+<status status="PASS" starttime="20200210 16:38:29.758" endtime="20200210 16:38:29.765"></status>
+</kw>
+<kw name="Concatenar textos" library="Selenium Proxy">
+<arguments>
+<arg>Bearer</arg>
+<arg>${localStorageToken}</arg>
+</arguments>
+<assign>
+<var>${BearerToken}</var>
+</assign>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${aText1}</arg>
+<arg>${aText2}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.765" level="INFO">${result} = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDIEFSR0VOVElOQSBTLkEu...</msg>
+<status status="PASS" starttime="20200210 16:38:29.765" endtime="20200210 16:38:29.765"></status>
+</kw>
+<msg timestamp="20200210 16:38:29.766" level="INFO">${BearerToken} = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDIEFSR0VOVElOQSBTLkEu...</msg>
+<status status="PASS" starttime="20200210 16:38:29.765" endtime="20200210 16:38:29.766"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${gAutToken}</arg>
+<arg>${BearerToken}</arg>
+</arguments>
+<msg timestamp="20200210 16:38:29.766" level="INFO">${gAutToken} = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDIEFSR0VOVElOQSBTLkEu...</msg>
+<status status="PASS" starttime="20200210 16:38:29.766" endtime="20200210 16:38:29.766"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:24.753" endtime="20200210 16:38:29.767"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:19.745" endtime="20200210 16:38:29.767"></status>
+</kw>
+<test id="s1-t1" name="GetChofer">
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>mySession</arg>
+<arg>${gApiUrlUat}</arg>
+</arguments>
+<msg timestamp="20200210 16:38:29.768" level="INFO">Creating Session using : alias=mySession, url=http://arrosvmapp313/Ldc.Yard.Web.Api/api, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20200210 16:38:29.768" endtime="20200210 16:38:29.768"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Authorization=${gAutToken}</arg>
+</arguments>
+<assign>
+<var>${headers}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.769" level="INFO">${headers} = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDI...</msg>
+<status status="PASS" starttime="20200210 16:38:29.768" endtime="20200210 16:38:29.769"></status>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>mySession</arg>
+<arg>/choferes/2024306</arg>
+<arg>headers=${headers}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.770" level="INFO">GET Request using : uri=/choferes/2024306, params=None, allow_redirects=True, timeout=None
+headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDIEFSR0VOVElOQSBTLkEuIiwidGVybWlkIjoxMzcsInRlcm1fY29kZSI6IjIzOTgxIiwidGVybV9uYW1lIjoiTE9VSVMgRFJFWUZVUyAoVElNQlVFUykiLCJ0ZXJtX2hhcnZlc3QiOnRydWUsInRlcm1fY2FyZCI6dHJ1ZSwibmFtZWlkIjoyNCwidW5pcXVlX25hbWUiOiJmYWJpby5vbGl2aWVyaSIsInNzaWQiOjEyMTAzLCJuYmYiOjE1ODEzNjM1MDUsImV4cCI6MTU4MTQwNjcwNSwiaWF0IjoxNTgxMzYzNTA1LCJpc3MiOiJ5YXJkLXVhdC1iYiJ9.0liT2HYfzgEhhSx2e5e3WgUuV0-Eyzj_yLy3e1eqJW8'} 
+data=None 
+json=None</msg>
+<msg timestamp="20200210 16:38:29.809" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200210 16:38:29.769" endtime="20200210 16:38:29.809"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${response.status_code}</arg>
+</arguments>
+<assign>
+<var>${statusCode}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.809" level="INFO">${statusCode} = 200</msg>
+<status status="PASS" starttime="20200210 16:38:29.809" endtime="20200210 16:38:29.809"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${statusCode}</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.810" endtime="20200210 16:38:29.810"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${response.content}</arg>
+</arguments>
+<assign>
+<var>${bodyString}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.810" level="INFO">${bodyString} = {"descripcion":"RODRIGUEZ","codigo":"20047507244","habilitado":true,"penalizado":false,"estaHabilitado":false,"id":2024306}</msg>
+<status status="PASS" starttime="20200210 16:38:29.810" endtime="20200210 16:38:29.810"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${bodyString}</arg>
+<arg>RODRIGUEZ</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.811" endtime="20200210 16:38:29.811"></status>
+</kw>
+<kw name="To Json" library="RequestsLibrary">
+<doc>Convert a string to a JSON object</doc>
+<arguments>
+<arg>${response.content}</arg>
+</arguments>
+<assign>
+<var>${bodyJSon}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.811" level="INFO">To JSON using : content={"descripcion":"RODRIGUEZ","codigo":"20047507244","habilitado":true,"penalizado":false,"estaHabilitado":false,"id":2024306} </msg>
+<msg timestamp="20200210 16:38:29.812" level="INFO">To JSON using : pretty_print=False </msg>
+<msg timestamp="20200210 16:38:29.812" level="INFO">${bodyJSon} = {'descripcion': 'RODRIGUEZ', 'codigo': '20047507244', 'habilitado': True, 'penalizado': False, 'estaHabilitado': False, 'id': 2024306}</msg>
+<status status="PASS" starttime="20200210 16:38:29.811" endtime="20200210 16:38:29.812"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${bodyJSon}</arg>
+<arg>$.descripcion</arg>
+</arguments>
+<assign>
+<var>${Desc}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.838" level="INFO">${Desc} = ['RODRIGUEZ']</msg>
+<status status="PASS" starttime="20200210 16:38:29.812" endtime="20200210 16:38:29.838"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Desc[0]}</arg>
+<arg>RODRIGUEZ</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.839" endtime="20200210 16:38:29.839"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${response.headers}</arg>
+<arg>Content-Type</arg>
+</arguments>
+<assign>
+<var>${contentType}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.840" level="INFO">${contentType} = application/json; charset=utf-8</msg>
+<status status="PASS" starttime="20200210 16:38:29.840" endtime="20200210 16:38:29.840"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${contentType}</arg>
+<arg>application/json; charset=utf-8</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.841" endtime="20200210 16:38:29.841"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.767" endtime="20200210 16:38:29.841" critical="yes"></status>
+</test>
+<test id="s1-t2" name="GetChoferes">
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>mySession</arg>
+<arg>${gApiUrlUat}</arg>
+</arguments>
+<msg timestamp="20200210 16:38:29.843" level="INFO">Creating Session using : alias=mySession, url=http://arrosvmapp313/Ldc.Yard.Web.Api/api, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20200210 16:38:29.843" endtime="20200210 16:38:29.843"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Authorization=${gAutToken}</arg>
+</arguments>
+<assign>
+<var>${headers}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.844" level="INFO">${headers} = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDI...</msg>
+<status status="PASS" starttime="20200210 16:38:29.844" endtime="20200210 16:38:29.844"></status>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>mySession</arg>
+<arg>/choferes/Filtros</arg>
+<arg>headers=${headers}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.845" level="INFO">GET Request using : uri=/choferes/Filtros, params=None, allow_redirects=True, timeout=None
+headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDIEFSR0VOVElOQSBTLkEuIiwidGVybWlkIjoxMzcsInRlcm1fY29kZSI6IjIzOTgxIiwidGVybV9uYW1lIjoiTE9VSVMgRFJFWUZVUyAoVElNQlVFUykiLCJ0ZXJtX2hhcnZlc3QiOnRydWUsInRlcm1fY2FyZCI6dHJ1ZSwibmFtZWlkIjoyNCwidW5pcXVlX25hbWUiOiJmYWJpby5vbGl2aWVyaSIsInNzaWQiOjEyMTAzLCJuYmYiOjE1ODEzNjM1MDUsImV4cCI6MTU4MTQwNjcwNSwiaWF0IjoxNTgxMzYzNTA1LCJpc3MiOiJ5YXJkLXVhdC1iYiJ9.0liT2HYfzgEhhSx2e5e3WgUuV0-Eyzj_yLy3e1eqJW8'} 
+data=None 
+json=None</msg>
+<msg timestamp="20200210 16:38:29.877" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200210 16:38:29.844" endtime="20200210 16:38:29.877"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${response.status_code}</arg>
+</arguments>
+<assign>
+<var>${statusCode}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.879" level="INFO">${statusCode} = 200</msg>
+<status status="PASS" starttime="20200210 16:38:29.878" endtime="20200210 16:38:29.879"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${statusCode}</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.879" endtime="20200210 16:38:29.879"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${response.content}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.880" endtime="20200210 16:38:29.882"></status>
+</kw>
+<kw name="To Json" library="RequestsLibrary">
+<doc>Convert a string to a JSON object</doc>
+<arguments>
+<arg>${response.content}</arg>
+</arguments>
+<assign>
+<var>${bodyJSon}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.884" level="INFO">To JSON using : content=[{"codigo":"20252208578","cuil":"20252208578","descripcion":"JOSE GARCIA","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":1},{"codigo":"20263008570","cuil":"20263008570","descripcion":"MARIO TAVERNA","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2},{"codigo":"20273948571","cuil":"20273948571","descripcion":"ARIEL CAPENAGUI","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":3},{"codigo":"20062572036","cuil":"20062572036","descripcion":"JOSE BUSCIGLUO","habilitado":"No","penalizado":false,"estaHabilitado":false,"id":3370},{"codigo":"20201396248","cuil":"20201396248","descripcion":"BUSCIGLIO GABRIEL","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":24294},{"codigo":"20315333505","cuil":"20315333505","descripcion":"RODRIGUEZ","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":24295},{"codigo":"20380000009","cuil":"20380000009","descripcion":"PRUEBA CENTRAL","habilitado":"Si","penalizado":true,"estaHabilitado":true,"id":24296},{"codigo":"20377153228","cuil":"20377153228","descripcion":"asd","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024295},{"codigo":"20049703717","cuil":"20049703717","descripcion":"RODRIGUEZ","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024296},{"codigo":"20049703393","cuil":"20049703393","descripcion":"RODRIGUEZ","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024297},{"codigo":"20049556692","cuil":"20049556692","descripcion":"RODRIGUEZ","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024298},{"codigo":"20049128801","cuil":"20049128801","descripcion":"RODRIGUEZ","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024299},{"codigo":"20049104791","cuil":"20049104791","descripcion":"RODRIGUEZ","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024300},{"codigo":"20048910808","cuil":"20048910808","descripcion":"RODRIGUEZ","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024301},{"codigo":"20048711171","cuil":"20048711171","descripcion":"RODRIGUEZ","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024302},{"codigo":"20047532796","cuil":"20047532796","descripcion":"RODRIGUEZ","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024303},{"codigo":"20047523401","cuil":"20047523401","descripcion":"RODRIGUEZ","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024304},{"codigo":"20047509069","cuil":"20047509069","descripcion":"RODRIGUEZ","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024305},{"codigo":"20047507244","cuil":"20047507244","descripcion":"RODRIGUEZ","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024306},{"codigo":"20047492972","cuil":"20047492972","descripcion":"RODRIGUEZ","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024307},{"codigo":"20047450145","cuil":"20047450145","descripcion":"RODRIGUEZ","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024308},{"codigo":"20047421986","cuil":"20047421986","descripcion":"RODRIGUEZ","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024309},{"codigo":"20047141363","cuil":"20047141363","descripcion":"RODRIGUEZ","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024310},{"codigo":"20047117268","cuil":"20047117268","descripcion":"RODRIGUEZ","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024311},{"codigo":"20047084386","cuil":"20047084386","descripcion":"RODRIGUEZ","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024312},{"codigo":"20047067112","cuil":"20047067112","descripcion":"RODRIGUEZ","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024313},{"codigo":"20047065705","cuil":"20047065705","descripcion":"RODRIGUEZ","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024314},{"codigo":"20047065616","cuil":"20047065616","descripcion":"RODRIGUEZ","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024315},{"codigo":"20046998856","cuil":"20046998856","descripcion":"RODRIGUEZ","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024316},{"codigo":"20046993730","cuil":"20046993730","descripcion":"RODRIGUEZ","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024317},{"codigo":"20015791218","cuil":"20015791218","descripcion":"RODRIGUEZ","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024318},{"codigo":"20028664797","cuil":"20028664797","descripcion":"SCHECHTEL EDGARDO","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024319},{"codigo":"20044933889","cuil":"20044933889","descripcion":"ROIG HECTRO","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024320},{"codigo":"20046436033","cuil":"20046436033","descripcion":"LOUS MIGUEL","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024321},{"codigo":"20046449674","cuil":"20046449674","descripcion":"CALLEJO HECTOR","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024322},{"codigo":"20046643799","cuil":"20046643799","descripcion":"CARBONAZZI R","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024323},{"codigo":"20046789890","cuil":"20046789890","descripcion":"HERNANDEZ ALBERTO","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024324},{"codigo":"20046852134","cuil":"20046852134","descripcion":"CONFORTOLA ENRIQUE","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024325},{"codigo":"20046858264","cuil":"20046858264","descripcion":"PONCE NESTOR","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024326},{"codigo":"20046880448","cuil":"20046880448","descripcion":"BOMBARDIERI CARLOS","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024327},{"codigo":"20046883331","cuil":"20046883331","descripcion":"CARRO ORLANDO FRANCISCO","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024328},{"codigo":"20046886845","cuil":"20046886845","descripcion":"PORRI EDGARDO","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024329},{"codigo":"20046929684","cuil":"20046929684","descripcion":"GARDEÑES DOMINGO A","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024330},{"codigo":"20046935412","cuil":"20046935412","descripcion":"MARTINEZ H","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024331},{"codigo":"20046945256","cuil":"20046945256","descripcion":"MILICHIO ROGELIO","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024332},{"codigo":"20046947828","cuil":"20046947828","descripcion":"LEGUIZAMON DAVID","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024333},{"codigo":"20046955820","cuil":"20046955820","descripcion":"MONTALDI GASTON ALEJANDRO","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024334},{"codigo":"20046961480","cuil":"20046961480","descripcion":"VEGGI JORGE HORACIO","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024335},{"codigo":"20046970226","cuil":"20046970226","descripcion":"NITIU RAUL","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024336},{"codigo":"20046993730","cuil":"20046993730","descripcion":"TAPIA JOSE LUIS","habilitado":"Si","penalizado":false,"estaHabilitado":true,"id":2024337}] </msg>
+<msg timestamp="20200210 16:38:29.884" level="INFO">To JSON using : pretty_print=False </msg>
+<msg timestamp="20200210 16:38:29.884" level="INFO">${bodyJSon} = [{'codigo': '20252208578', 'cuil': '20252208578', 'descripcion': 'JOSE GARCIA', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 1}, {'codigo': '20263008570', 'cuil': '2026300857...</msg>
+<status status="PASS" starttime="20200210 16:38:29.883" endtime="20200210 16:38:29.885"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${bodyJSon}</arg>
+<arg>$[0].descripcion</arg>
+</arguments>
+<assign>
+<var>${desc}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.913" level="INFO">${desc} = ['JOSE GARCIA']</msg>
+<status status="PASS" starttime="20200210 16:38:29.885" endtime="20200210 16:38:29.913"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${response.json()}</arg>
+</arguments>
+<assign>
+<var>@{Dicc}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.914" level="INFO">@{Dicc} = [ {'codigo': '20252208578', 'cuil': '20252208578', 'descripcion': 'JOSE GARCIA', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 1} | {'codigo': '20263008570', 'cuil': '20263008...</msg>
+<status status="PASS" starttime="20200210 16:38:29.913" endtime="20200210 16:38:29.915"></status>
+</kw>
+<kw name="${item} IN [ @{Dicc} ]" type="for">
+<kw name="${item} = {'codigo': '20252208578', 'cuil': '20252208578', 'descripcion': 'JOSE GARCIA', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 1}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.916" level="INFO">${codigo} = 20252208578</msg>
+<status status="PASS" starttime="20200210 16:38:29.915" endtime="20200210 16:38:29.916"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.916" endtime="20200210 16:38:29.916"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.915" endtime="20200210 16:38:29.917"></status>
+</kw>
+<kw name="${item} = {'codigo': '20263008570', 'cuil': '20263008570', 'descripcion': 'MARIO TAVERNA', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.917" level="INFO">${codigo} = 20263008570</msg>
+<status status="PASS" starttime="20200210 16:38:29.917" endtime="20200210 16:38:29.917"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.917" endtime="20200210 16:38:29.918"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.917" endtime="20200210 16:38:29.918"></status>
+</kw>
+<kw name="${item} = {'codigo': '20273948571', 'cuil': '20273948571', 'descripcion': 'ARIEL CAPENAGUI', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 3}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.918" level="INFO">${codigo} = 20273948571</msg>
+<status status="PASS" starttime="20200210 16:38:29.918" endtime="20200210 16:38:29.918"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.918" endtime="20200210 16:38:29.919"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.918" endtime="20200210 16:38:29.919"></status>
+</kw>
+<kw name="${item} = {'codigo': '20062572036', 'cuil': '20062572036', 'descripcion': 'JOSE BUSCIGLUO', 'habilitado': 'No', 'penalizado': False, 'estaHabilitado': False, 'id': 3370}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.919" level="INFO">${codigo} = 20062572036</msg>
+<status status="PASS" starttime="20200210 16:38:29.919" endtime="20200210 16:38:29.919"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.919" endtime="20200210 16:38:29.920"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.919" endtime="20200210 16:38:29.920"></status>
+</kw>
+<kw name="${item} = {'codigo': '20201396248', 'cuil': '20201396248', 'descripcion': 'BUSCIGLIO GABRIEL', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 24294}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.920" level="INFO">${codigo} = 20201396248</msg>
+<status status="PASS" starttime="20200210 16:38:29.920" endtime="20200210 16:38:29.920"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.920" endtime="20200210 16:38:29.920"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.920" endtime="20200210 16:38:29.920"></status>
+</kw>
+<kw name="${item} = {'codigo': '20315333505', 'cuil': '20315333505', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 24295}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.921" level="INFO">${codigo} = 20315333505</msg>
+<status status="PASS" starttime="20200210 16:38:29.921" endtime="20200210 16:38:29.921"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.921" endtime="20200210 16:38:29.921"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.921" endtime="20200210 16:38:29.921"></status>
+</kw>
+<kw name="${item} = {'codigo': '20380000009', 'cuil': '20380000009', 'descripcion': 'PRUEBA CENTRAL', 'habilitado': 'Si', 'penalizado': True, 'estaHabilitado': True, 'id': 24296}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.922" level="INFO">${codigo} = 20380000009</msg>
+<status status="PASS" starttime="20200210 16:38:29.922" endtime="20200210 16:38:29.922"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.922" endtime="20200210 16:38:29.923"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.922" endtime="20200210 16:38:29.923"></status>
+</kw>
+<kw name="${item} = {'codigo': '20377153228', 'cuil': '20377153228', 'descripcion': 'asd', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024295}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.924" level="INFO">${codigo} = 20377153228</msg>
+<status status="PASS" starttime="20200210 16:38:29.923" endtime="20200210 16:38:29.924"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.924" endtime="20200210 16:38:29.925"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.923" endtime="20200210 16:38:29.925"></status>
+</kw>
+<kw name="${item} = {'codigo': '20049703717', 'cuil': '20049703717', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024296}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.926" level="INFO">${codigo} = 20049703717</msg>
+<status status="PASS" starttime="20200210 16:38:29.925" endtime="20200210 16:38:29.926"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.926" endtime="20200210 16:38:29.926"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.925" endtime="20200210 16:38:29.927"></status>
+</kw>
+<kw name="${item} = {'codigo': '20049703393', 'cuil': '20049703393', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024297}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.927" level="INFO">${codigo} = 20049703393</msg>
+<status status="PASS" starttime="20200210 16:38:29.927" endtime="20200210 16:38:29.927"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.928" endtime="20200210 16:38:29.928"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.927" endtime="20200210 16:38:29.928"></status>
+</kw>
+<kw name="${item} = {'codigo': '20049556692', 'cuil': '20049556692', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024298}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.929" level="INFO">${codigo} = 20049556692</msg>
+<status status="PASS" starttime="20200210 16:38:29.929" endtime="20200210 16:38:29.929"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.929" endtime="20200210 16:38:29.929"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.928" endtime="20200210 16:38:29.929"></status>
+</kw>
+<kw name="${item} = {'codigo': '20049128801', 'cuil': '20049128801', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024299}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.930" level="INFO">${codigo} = 20049128801</msg>
+<status status="PASS" starttime="20200210 16:38:29.930" endtime="20200210 16:38:29.930"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.930" endtime="20200210 16:38:29.930"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.930" endtime="20200210 16:38:29.930"></status>
+</kw>
+<kw name="${item} = {'codigo': '20049104791', 'cuil': '20049104791', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024300}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.931" level="INFO">${codigo} = 20049104791</msg>
+<status status="PASS" starttime="20200210 16:38:29.931" endtime="20200210 16:38:29.931"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.931" endtime="20200210 16:38:29.931"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.931" endtime="20200210 16:38:29.931"></status>
+</kw>
+<kw name="${item} = {'codigo': '20048910808', 'cuil': '20048910808', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024301}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.932" level="INFO">${codigo} = 20048910808</msg>
+<status status="PASS" starttime="20200210 16:38:29.931" endtime="20200210 16:38:29.932"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.932" endtime="20200210 16:38:29.932"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.931" endtime="20200210 16:38:29.932"></status>
+</kw>
+<kw name="${item} = {'codigo': '20048711171', 'cuil': '20048711171', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024302}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.933" level="INFO">${codigo} = 20048711171</msg>
+<status status="PASS" starttime="20200210 16:38:29.932" endtime="20200210 16:38:29.933"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.933" endtime="20200210 16:38:29.933"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.932" endtime="20200210 16:38:29.933"></status>
+</kw>
+<kw name="${item} = {'codigo': '20047532796', 'cuil': '20047532796', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024303}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.933" level="INFO">${codigo} = 20047532796</msg>
+<status status="PASS" starttime="20200210 16:38:29.933" endtime="20200210 16:38:29.933"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.933" endtime="20200210 16:38:29.934"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.933" endtime="20200210 16:38:29.934"></status>
+</kw>
+<kw name="${item} = {'codigo': '20047523401', 'cuil': '20047523401', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024304}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.934" level="INFO">${codigo} = 20047523401</msg>
+<status status="PASS" starttime="20200210 16:38:29.934" endtime="20200210 16:38:29.934"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.934" endtime="20200210 16:38:29.935"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.934" endtime="20200210 16:38:29.935"></status>
+</kw>
+<kw name="${item} = {'codigo': '20047509069', 'cuil': '20047509069', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024305}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.935" level="INFO">${codigo} = 20047509069</msg>
+<status status="PASS" starttime="20200210 16:38:29.935" endtime="20200210 16:38:29.935"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.935" endtime="20200210 16:38:29.935"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.935" endtime="20200210 16:38:29.935"></status>
+</kw>
+<kw name="${item} = {'codigo': '20047507244', 'cuil': '20047507244', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024306}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.936" level="INFO">${codigo} = 20047507244</msg>
+<status status="PASS" starttime="20200210 16:38:29.936" endtime="20200210 16:38:29.936"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.936" endtime="20200210 16:38:29.936"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.936" endtime="20200210 16:38:29.936"></status>
+</kw>
+<kw name="${item} = {'codigo': '20047492972', 'cuil': '20047492972', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024307}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.937" level="INFO">${codigo} = 20047492972</msg>
+<status status="PASS" starttime="20200210 16:38:29.936" endtime="20200210 16:38:29.937"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.937" endtime="20200210 16:38:29.937"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.936" endtime="20200210 16:38:29.937"></status>
+</kw>
+<kw name="${item} = {'codigo': '20047450145', 'cuil': '20047450145', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024308}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.937" level="INFO">${codigo} = 20047450145</msg>
+<status status="PASS" starttime="20200210 16:38:29.937" endtime="20200210 16:38:29.937"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.938" endtime="20200210 16:38:29.938"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.937" endtime="20200210 16:38:29.938"></status>
+</kw>
+<kw name="${item} = {'codigo': '20047421986', 'cuil': '20047421986', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024309}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.938" level="INFO">${codigo} = 20047421986</msg>
+<status status="PASS" starttime="20200210 16:38:29.938" endtime="20200210 16:38:29.938"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.938" endtime="20200210 16:38:29.939"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.938" endtime="20200210 16:38:29.939"></status>
+</kw>
+<kw name="${item} = {'codigo': '20047141363', 'cuil': '20047141363', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024310}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.939" level="INFO">${codigo} = 20047141363</msg>
+<status status="PASS" starttime="20200210 16:38:29.939" endtime="20200210 16:38:29.939"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.939" endtime="20200210 16:38:29.939"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.939" endtime="20200210 16:38:29.939"></status>
+</kw>
+<kw name="${item} = {'codigo': '20047117268', 'cuil': '20047117268', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024311}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.940" level="INFO">${codigo} = 20047117268</msg>
+<status status="PASS" starttime="20200210 16:38:29.940" endtime="20200210 16:38:29.940"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.940" endtime="20200210 16:38:29.940"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.940" endtime="20200210 16:38:29.940"></status>
+</kw>
+<kw name="${item} = {'codigo': '20047084386', 'cuil': '20047084386', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024312}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.941" level="INFO">${codigo} = 20047084386</msg>
+<status status="PASS" starttime="20200210 16:38:29.940" endtime="20200210 16:38:29.941"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.941" endtime="20200210 16:38:29.941"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.940" endtime="20200210 16:38:29.941"></status>
+</kw>
+<kw name="${item} = {'codigo': '20047067112', 'cuil': '20047067112', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024313}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.942" level="INFO">${codigo} = 20047067112</msg>
+<status status="PASS" starttime="20200210 16:38:29.941" endtime="20200210 16:38:29.942"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.942" endtime="20200210 16:38:29.942"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.941" endtime="20200210 16:38:29.942"></status>
+</kw>
+<kw name="${item} = {'codigo': '20047065705', 'cuil': '20047065705', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024314}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.943" level="INFO">${codigo} = 20047065705</msg>
+<status status="PASS" starttime="20200210 16:38:29.942" endtime="20200210 16:38:29.943"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.943" endtime="20200210 16:38:29.944"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.942" endtime="20200210 16:38:29.945"></status>
+</kw>
+<kw name="${item} = {'codigo': '20047065616', 'cuil': '20047065616', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024315}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.946" level="INFO">${codigo} = 20047065616</msg>
+<status status="PASS" starttime="20200210 16:38:29.945" endtime="20200210 16:38:29.946"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.946" endtime="20200210 16:38:29.946"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.945" endtime="20200210 16:38:29.946"></status>
+</kw>
+<kw name="${item} = {'codigo': '20046998856', 'cuil': '20046998856', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024316}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.947" level="INFO">${codigo} = 20046998856</msg>
+<status status="PASS" starttime="20200210 16:38:29.947" endtime="20200210 16:38:29.947"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.947" endtime="20200210 16:38:29.948"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.947" endtime="20200210 16:38:29.948"></status>
+</kw>
+<kw name="${item} = {'codigo': '20046993730', 'cuil': '20046993730', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024317}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.948" level="INFO">${codigo} = 20046993730</msg>
+<status status="PASS" starttime="20200210 16:38:29.948" endtime="20200210 16:38:29.948"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.948" endtime="20200210 16:38:29.949"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.948" endtime="20200210 16:38:29.949"></status>
+</kw>
+<kw name="${item} = {'codigo': '20015791218', 'cuil': '20015791218', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024318}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.949" level="INFO">${codigo} = 20015791218</msg>
+<status status="PASS" starttime="20200210 16:38:29.949" endtime="20200210 16:38:29.949"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.949" endtime="20200210 16:38:29.949"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.949" endtime="20200210 16:38:29.949"></status>
+</kw>
+<kw name="${item} = {'codigo': '20028664797', 'cuil': '20028664797', 'descripcion': 'SCHECHTEL EDGARDO', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024319}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.950" level="INFO">${codigo} = 20028664797</msg>
+<status status="PASS" starttime="20200210 16:38:29.950" endtime="20200210 16:38:29.950"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.950" endtime="20200210 16:38:29.950"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.949" endtime="20200210 16:38:29.950"></status>
+</kw>
+<kw name="${item} = {'codigo': '20044933889', 'cuil': '20044933889', 'descripcion': 'ROIG HECTRO', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024320}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.951" level="INFO">${codigo} = 20044933889</msg>
+<status status="PASS" starttime="20200210 16:38:29.950" endtime="20200210 16:38:29.951"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.951" endtime="20200210 16:38:29.951"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.950" endtime="20200210 16:38:29.951"></status>
+</kw>
+<kw name="${item} = {'codigo': '20046436033', 'cuil': '20046436033', 'descripcion': 'LOUS MIGUEL', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024321}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.952" level="INFO">${codigo} = 20046436033</msg>
+<status status="PASS" starttime="20200210 16:38:29.951" endtime="20200210 16:38:29.952"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.952" endtime="20200210 16:38:29.952"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.951" endtime="20200210 16:38:29.952"></status>
+</kw>
+<kw name="${item} = {'codigo': '20046449674', 'cuil': '20046449674', 'descripcion': 'CALLEJO HECTOR', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024322}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.953" level="INFO">${codigo} = 20046449674</msg>
+<status status="PASS" starttime="20200210 16:38:29.952" endtime="20200210 16:38:29.953"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.953" endtime="20200210 16:38:29.953"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.952" endtime="20200210 16:38:29.953"></status>
+</kw>
+<kw name="${item} = {'codigo': '20046643799', 'cuil': '20046643799', 'descripcion': 'CARBONAZZI R', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024323}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.954" level="INFO">${codigo} = 20046643799</msg>
+<status status="PASS" starttime="20200210 16:38:29.953" endtime="20200210 16:38:29.954"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.954" endtime="20200210 16:38:29.954"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.953" endtime="20200210 16:38:29.954"></status>
+</kw>
+<kw name="${item} = {'codigo': '20046789890', 'cuil': '20046789890', 'descripcion': 'HERNANDEZ ALBERTO', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024324}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.955" level="INFO">${codigo} = 20046789890</msg>
+<status status="PASS" starttime="20200210 16:38:29.954" endtime="20200210 16:38:29.955"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.955" endtime="20200210 16:38:29.955"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.954" endtime="20200210 16:38:29.955"></status>
+</kw>
+<kw name="${item} = {'codigo': '20046852134', 'cuil': '20046852134', 'descripcion': 'CONFORTOLA ENRIQUE', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024325}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.955" level="INFO">${codigo} = 20046852134</msg>
+<status status="PASS" starttime="20200210 16:38:29.955" endtime="20200210 16:38:29.955"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.956" endtime="20200210 16:38:29.956"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.955" endtime="20200210 16:38:29.956"></status>
+</kw>
+<kw name="${item} = {'codigo': '20046858264', 'cuil': '20046858264', 'descripcion': 'PONCE NESTOR', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024326}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.957" level="INFO">${codigo} = 20046858264</msg>
+<status status="PASS" starttime="20200210 16:38:29.956" endtime="20200210 16:38:29.957"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.957" endtime="20200210 16:38:29.957"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.956" endtime="20200210 16:38:29.957"></status>
+</kw>
+<kw name="${item} = {'codigo': '20046880448', 'cuil': '20046880448', 'descripcion': 'BOMBARDIERI CARLOS', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024327}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.958" level="INFO">${codigo} = 20046880448</msg>
+<status status="PASS" starttime="20200210 16:38:29.957" endtime="20200210 16:38:29.958"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.958" endtime="20200210 16:38:29.958"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.957" endtime="20200210 16:38:29.958"></status>
+</kw>
+<kw name="${item} = {'codigo': '20046883331', 'cuil': '20046883331', 'descripcion': 'CARRO ORLANDO FRANCISCO', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024328}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.959" level="INFO">${codigo} = 20046883331</msg>
+<status status="PASS" starttime="20200210 16:38:29.959" endtime="20200210 16:38:29.959"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.960" endtime="20200210 16:38:29.961"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.958" endtime="20200210 16:38:29.961"></status>
+</kw>
+<kw name="${item} = {'codigo': '20046886845', 'cuil': '20046886845', 'descripcion': 'PORRI EDGARDO', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024329}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.962" level="INFO">${codigo} = 20046886845</msg>
+<status status="PASS" starttime="20200210 16:38:29.961" endtime="20200210 16:38:29.962"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.962" endtime="20200210 16:38:29.963"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.961" endtime="20200210 16:38:29.963"></status>
+</kw>
+<kw name="${item} = {'codigo': '20046929684', 'cuil': '20046929684', 'descripcion': 'GARDEÑES DOMINGO A', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024330}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.964" level="INFO">${codigo} = 20046929684</msg>
+<status status="PASS" starttime="20200210 16:38:29.963" endtime="20200210 16:38:29.964"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.964" endtime="20200210 16:38:29.964"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.963" endtime="20200210 16:38:29.964"></status>
+</kw>
+<kw name="${item} = {'codigo': '20046935412', 'cuil': '20046935412', 'descripcion': 'MARTINEZ H', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024331}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.965" level="INFO">${codigo} = 20046935412</msg>
+<status status="PASS" starttime="20200210 16:38:29.964" endtime="20200210 16:38:29.965"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.965" endtime="20200210 16:38:29.965"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.964" endtime="20200210 16:38:29.965"></status>
+</kw>
+<kw name="${item} = {'codigo': '20046945256', 'cuil': '20046945256', 'descripcion': 'MILICHIO ROGELIO', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024332}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.965" level="INFO">${codigo} = 20046945256</msg>
+<status status="PASS" starttime="20200210 16:38:29.965" endtime="20200210 16:38:29.965"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.966" endtime="20200210 16:38:29.966"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.965" endtime="20200210 16:38:29.966"></status>
+</kw>
+<kw name="${item} = {'codigo': '20046947828', 'cuil': '20046947828', 'descripcion': 'LEGUIZAMON DAVID', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024333}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.966" level="INFO">${codigo} = 20046947828</msg>
+<status status="PASS" starttime="20200210 16:38:29.966" endtime="20200210 16:38:29.966"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.966" endtime="20200210 16:38:29.967"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.966" endtime="20200210 16:38:29.967"></status>
+</kw>
+<kw name="${item} = {'codigo': '20046955820', 'cuil': '20046955820', 'descripcion': 'MONTALDI GASTON ALEJANDRO', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024334}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.967" level="INFO">${codigo} = 20046955820</msg>
+<status status="PASS" starttime="20200210 16:38:29.967" endtime="20200210 16:38:29.967"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.967" endtime="20200210 16:38:29.968"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.967" endtime="20200210 16:38:29.968"></status>
+</kw>
+<kw name="${item} = {'codigo': '20046961480', 'cuil': '20046961480', 'descripcion': 'VEGGI JORGE HORACIO', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024335}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.968" level="INFO">${codigo} = 20046961480</msg>
+<status status="PASS" starttime="20200210 16:38:29.968" endtime="20200210 16:38:29.968"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.968" endtime="20200210 16:38:29.968"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.968" endtime="20200210 16:38:29.968"></status>
+</kw>
+<kw name="${item} = {'codigo': '20046970226', 'cuil': '20046970226', 'descripcion': 'NITIU RAUL', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024336}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.969" level="INFO">${codigo} = 20046970226</msg>
+<status status="PASS" starttime="20200210 16:38:29.969" endtime="20200210 16:38:29.969"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.969" endtime="20200210 16:38:29.969"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.969" endtime="20200210 16:38:29.970"></status>
+</kw>
+<kw name="${item} = {'codigo': '20046993730', 'cuil': '20046993730', 'descripcion': 'TAPIA JOSE LUIS', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 2024337}" type="foritem">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>codigo</arg>
+</arguments>
+<assign>
+<var>${codigo}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.970" level="INFO">${codigo} = 20046993730</msg>
+<status status="PASS" starttime="20200210 16:38:29.970" endtime="20200210 16:38:29.970"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${codigo}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:29.970" endtime="20200210 16:38:29.970"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.970" endtime="20200210 16:38:29.970"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.915" endtime="20200210 16:38:29.970"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:29.842" endtime="20200210 16:38:29.971" critical="yes"></status>
+</test>
+<test id="s1-t3" name="PostChofer">
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>mySession</arg>
+<arg>${gApiUrlUat}</arg>
+</arguments>
+<msg timestamp="20200210 16:38:29.972" level="INFO">Creating Session using : alias=mySession, url=http://arrosvmapp313/Ldc.Yard.Web.Api/api, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20200210 16:38:29.972" endtime="20200210 16:38:29.972"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Authorization=${gAutToken}</arg>
+<arg>Content-Type=application/json</arg>
+</arguments>
+<assign>
+<var>${headers}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.973" level="INFO">${headers} = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDI...</msg>
+<status status="PASS" starttime="20200210 16:38:29.973" endtime="20200210 16:38:29.973"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Cuil=20269125662</arg>
+<arg>RazonSocial=Arzura Juan</arg>
+<arg>Habilitado=true</arg>
+</arguments>
+<assign>
+<var>${body}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.974" level="INFO">${body} = {'Cuil': '20269125662', 'RazonSocial': 'Arzura Juan', 'Habilitado': 'true'}</msg>
+<status status="PASS" starttime="20200210 16:38:29.974" endtime="20200210 16:38:29.974"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>Send a POST request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>mySession</arg>
+<arg>/choferes</arg>
+<arg>data=${body}</arg>
+<arg>headers=${headers}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20200210 16:38:29.975" level="INFO">POST Request using : uri=/choferes, params=None, files=None, allow_redirects=True, timeout=None
+headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDIEFSR0VOVElOQSBTLkEuIiwidGVybWlkIjoxMzcsInRlcm1fY29kZSI6IjIzOTgxIiwidGVybV9uYW1lIjoiTE9VSVMgRFJFWUZVUyAoVElNQlVFUykiLCJ0ZXJtX2hhcnZlc3QiOnRydWUsInRlcm1fY2FyZCI6dHJ1ZSwibmFtZWlkIjoyNCwidW5pcXVlX25hbWUiOiJmYWJpby5vbGl2aWVyaSIsInNzaWQiOjEyMTAzLCJuYmYiOjE1ODEzNjM1MDUsImV4cCI6MTU4MTQwNjcwNSwiaWF0IjoxNTgxMzYzNTA1LCJpc3MiOiJ5YXJkLXVhdC1iYiJ9.0liT2HYfzgEhhSx2e5e3WgUuV0-Eyzj_yLy3e1eqJW8', 'Content-Type': 'application/json'} 
+data={"Cuil": "20269125662", "RazonSocial": "Arzura Juan", "Habilitado": "true"} 
+json=None</msg>
+<msg timestamp="20200210 16:38:30.010" level="INFO">${response} = &lt;Response [422]&gt;</msg>
+<status status="PASS" starttime="20200210 16:38:29.974" endtime="20200210 16:38:30.011"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${response.status_code}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:30.012" endtime="20200210 16:38:30.013"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${response.content}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:30.014" endtime="20200210 16:38:30.015"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${response.headers}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:30.015" endtime="20200210 16:38:30.015"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${response.status_code}</arg>
+</arguments>
+<assign>
+<var>${statusCode}</var>
+</assign>
+<msg timestamp="20200210 16:38:30.016" level="INFO">${statusCode} = 422</msg>
+<status status="PASS" starttime="20200210 16:38:30.016" endtime="20200210 16:38:30.016"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${statusCode}</arg>
+<arg>201</arg>
+</arguments>
+<msg timestamp="20200210 16:38:30.017" level="FAIL">422 != 201</msg>
+<status status="FAIL" starttime="20200210 16:38:30.016" endtime="20200210 16:38:30.017"></status>
+</kw>
+<status status="FAIL" starttime="20200210 16:38:29.971" endtime="20200210 16:38:30.017" critical="yes">422 != 201</status>
+</test>
+<test id="s1-t4" name="PostChoferFromFile">
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>mySession</arg>
+<arg>${gApiUrlUat}</arg>
+</arguments>
+<msg timestamp="20200210 16:38:30.019" level="INFO">Creating Session using : alias=mySession, url=http://arrosvmapp313/Ldc.Yard.Web.Api/api, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20200210 16:38:30.019" endtime="20200210 16:38:30.019"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Authorization=${gAutToken}</arg>
+<arg>Content-Type=application/json</arg>
+</arguments>
+<assign>
+<var>${headers}</var>
+</assign>
+<msg timestamp="20200210 16:38:30.020" level="INFO">${headers} = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDI...</msg>
+<status status="PASS" starttime="20200210 16:38:30.019" endtime="20200210 16:38:30.020"></status>
+</kw>
+<kw name="Load JSON From File" library="JSONLibrary">
+<doc>Load JSON from file.</doc>
+<arguments>
+<arg>${FilePathPruebaPost}</arg>
+</arguments>
+<assign>
+<var>${body}</var>
+</assign>
+<msg timestamp="20200210 16:38:30.021" level="INFO">${body} = {'Cuil': '20269125662', 'RazonSocial': 'Arzura Juan', 'Habilitado': 'true'}</msg>
+<status status="PASS" starttime="20200210 16:38:30.020" endtime="20200210 16:38:30.021"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>Send a POST request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>mySession</arg>
+<arg>/choferes</arg>
+<arg>data=${body}</arg>
+<arg>headers=${headers}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20200210 16:38:30.021" level="INFO">POST Request using : uri=/choferes, params=None, files=None, allow_redirects=True, timeout=None
+headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDIEFSR0VOVElOQSBTLkEuIiwidGVybWlkIjoxMzcsInRlcm1fY29kZSI6IjIzOTgxIiwidGVybV9uYW1lIjoiTE9VSVMgRFJFWUZVUyAoVElNQlVFUykiLCJ0ZXJtX2hhcnZlc3QiOnRydWUsInRlcm1fY2FyZCI6dHJ1ZSwibmFtZWlkIjoyNCwidW5pcXVlX25hbWUiOiJmYWJpby5vbGl2aWVyaSIsInNzaWQiOjEyMTAzLCJuYmYiOjE1ODEzNjM1MDUsImV4cCI6MTU4MTQwNjcwNSwiaWF0IjoxNTgxMzYzNTA1LCJpc3MiOiJ5YXJkLXVhdC1iYiJ9.0liT2HYfzgEhhSx2e5e3WgUuV0-Eyzj_yLy3e1eqJW8', 'Content-Type': 'application/json'} 
+data={"Cuil": "20269125662", "RazonSocial": "Arzura Juan", "Habilitado": "true"} 
+json=None</msg>
+<msg timestamp="20200210 16:38:30.052" level="INFO">${response} = &lt;Response [422]&gt;</msg>
+<status status="PASS" starttime="20200210 16:38:30.021" endtime="20200210 16:38:30.052"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${response.status_code}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:30.053" endtime="20200210 16:38:30.053"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${response.content}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:30.054" endtime="20200210 16:38:30.054"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${response.headers}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:30.054" endtime="20200210 16:38:30.055"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${response.status_code}</arg>
+</arguments>
+<assign>
+<var>${statusCode}</var>
+</assign>
+<msg timestamp="20200210 16:38:30.055" level="INFO">${statusCode} = 422</msg>
+<status status="PASS" starttime="20200210 16:38:30.055" endtime="20200210 16:38:30.055"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${statusCode}</arg>
+<arg>201</arg>
+</arguments>
+<msg timestamp="20200210 16:38:30.056" level="FAIL">422 != 201</msg>
+<status status="FAIL" starttime="20200210 16:38:30.055" endtime="20200210 16:38:30.056"></status>
+</kw>
+<status status="FAIL" starttime="20200210 16:38:30.018" endtime="20200210 16:38:30.056" critical="yes">422 != 201</status>
+</test>
+<test id="s1-t5" name="CargaJson">
+<kw name="Load JSON From File" library="JSONLibrary">
+<doc>Load JSON from file.</doc>
+<arguments>
+<arg>${FilePathPrueba}</arg>
+</arguments>
+<assign>
+<var>${Archivo}</var>
+</assign>
+<msg timestamp="20200210 16:38:30.058" level="INFO">${Archivo} = {'firstName': 'John', 'lastName': 'doe', 'age': 26, 'address': {'streetAddress': 'naist street', 'city': 'Nara', 'postalCode': '630-0192'}, 'phoneNumbers': [{'type': 'iPhone', 'number': '0123-4567-888...</msg>
+<status status="PASS" starttime="20200210 16:38:30.057" endtime="20200210 16:38:30.058"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${Archivo}</arg>
+<arg>$.lastName</arg>
+</arguments>
+<assign>
+<var>${LasName}</var>
+</assign>
+<msg timestamp="20200210 16:38:30.082" level="INFO">${LasName} = ['doe']</msg>
+<status status="PASS" starttime="20200210 16:38:30.058" endtime="20200210 16:38:30.082"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${LasName[0]}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:30.082" endtime="20200210 16:38:30.083"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:30.057" endtime="20200210 16:38:30.083" critical="yes"></status>
+</test>
+<test id="s1-t6" name="RespRecibidaVsEsperada">
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>mySession</arg>
+<arg>${gApiUrlUat}</arg>
+</arguments>
+<msg timestamp="20200210 16:38:30.085" level="INFO">Creating Session using : alias=mySession, url=http://arrosvmapp313/Ldc.Yard.Web.Api/api, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20200210 16:38:30.085" endtime="20200210 16:38:30.086"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Authorization=${gAutToken}</arg>
+</arguments>
+<assign>
+<var>${headers}</var>
+</assign>
+<msg timestamp="20200210 16:38:30.086" level="INFO">${headers} = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDI...</msg>
+<status status="PASS" starttime="20200210 16:38:30.086" endtime="20200210 16:38:30.086"></status>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>mySession</arg>
+<arg>/choferes/2024306</arg>
+<arg>headers=${headers}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20200210 16:38:30.087" level="INFO">GET Request using : uri=/choferes/2024306, params=None, allow_redirects=True, timeout=None
+headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDIEFSR0VOVElOQSBTLkEuIiwidGVybWlkIjoxMzcsInRlcm1fY29kZSI6IjIzOTgxIiwidGVybV9uYW1lIjoiTE9VSVMgRFJFWUZVUyAoVElNQlVFUykiLCJ0ZXJtX2hhcnZlc3QiOnRydWUsInRlcm1fY2FyZCI6dHJ1ZSwibmFtZWlkIjoyNCwidW5pcXVlX25hbWUiOiJmYWJpby5vbGl2aWVyaSIsInNzaWQiOjEyMTAzLCJuYmYiOjE1ODEzNjM1MDUsImV4cCI6MTU4MTQwNjcwNSwiaWF0IjoxNTgxMzYzNTA1LCJpc3MiOiJ5YXJkLXVhdC1iYiJ9.0liT2HYfzgEhhSx2e5e3WgUuV0-Eyzj_yLy3e1eqJW8'} 
+data=None 
+json=None</msg>
+<msg timestamp="20200210 16:38:30.118" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200210 16:38:30.087" endtime="20200210 16:38:30.118"></status>
+</kw>
+<kw name="To Json" library="RequestsLibrary">
+<doc>Convert a string to a JSON object</doc>
+<arguments>
+<arg>${response.content}</arg>
+</arguments>
+<assign>
+<var>${RespRecibida}</var>
+</assign>
+<msg timestamp="20200210 16:38:30.119" level="INFO">To JSON using : content={"descripcion":"RODRIGUEZ","codigo":"20047507244","habilitado":true,"penalizado":false,"estaHabilitado":false,"id":2024306} </msg>
+<msg timestamp="20200210 16:38:30.119" level="INFO">To JSON using : pretty_print=False </msg>
+<msg timestamp="20200210 16:38:30.119" level="INFO">${RespRecibida} = {'descripcion': 'RODRIGUEZ', 'codigo': '20047507244', 'habilitado': True, 'penalizado': False, 'estaHabilitado': False, 'id': 2024306}</msg>
+<status status="PASS" starttime="20200210 16:38:30.118" endtime="20200210 16:38:30.119"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${RespRecibida}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:30.119" endtime="20200210 16:38:30.120"></status>
+</kw>
+<kw name="Load JSON From File" library="JSONLibrary">
+<doc>Load JSON from file.</doc>
+<arguments>
+<arg>${FilePathPruebaComp}</arg>
+</arguments>
+<assign>
+<var>${RespEsperada}</var>
+</assign>
+<msg timestamp="20200210 16:38:30.121" level="INFO">${RespEsperada} = {'descripcion': 'RODRIGUEZ', 'codigo': '20047507244', 'habilitado': True, 'penalizado': False, 'estaHabilitado': False, 'id': 2024306}</msg>
+<status status="PASS" starttime="20200210 16:38:30.120" endtime="20200210 16:38:30.121"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${RespEsperada}</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:30.121" endtime="20200210 16:38:30.121"></status>
+</kw>
+<kw name="Dictionaries Should Be Equal" library="Collections">
+<doc>Fails if the given dictionaries are not equal.</doc>
+<arguments>
+<arg>${RespRecibida}</arg>
+<arg>${RespEsperada}</arg>
+<arg>value=true</arg>
+</arguments>
+<status status="PASS" starttime="20200210 16:38:30.122" endtime="20200210 16:38:30.122"></status>
+</kw>
+<status status="PASS" starttime="20200210 16:38:30.084" endtime="20200210 16:38:30.122" critical="yes"></status>
+</test>
+<test id="s1-t7" name="CompRespMultiple">
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>mySession</arg>
+<arg>${gApiUrlUat}</arg>
+</arguments>
+<msg timestamp="20200210 16:38:30.123" level="INFO">Creating Session using : alias=mySession, url=http://arrosvmapp313/Ldc.Yard.Web.Api/api, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20200210 16:38:30.123" endtime="20200210 16:38:30.123"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Content-Type=application/json; charset=utf-8</arg>
+<arg>Authorization=${gAutToken}</arg>
+</arguments>
+<assign>
+<var>${headers}</var>
+</assign>
+<msg timestamp="20200210 16:38:30.124" level="INFO">${headers} = {'Content-Type': 'application/json; charset=utf-8', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaX...</msg>
+<status status="PASS" starttime="20200210 16:38:30.124" endtime="20200210 16:38:30.124"></status>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>mySession</arg>
+<arg>/choferes/Filtros?$&amp;habilitado=true&amp;descripcion=RODRIGUEZ</arg>
+<arg>headers=${headers}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20200210 16:38:30.124" level="INFO">GET Request using : uri=/choferes/Filtros?$&amp;habilitado=true&amp;descripcion=RODRIGUEZ, params=None, allow_redirects=True, timeout=None
+headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json; charset=utf-8', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDIEFSR0VOVElOQSBTLkEuIiwidGVybWlkIjoxMzcsInRlcm1fY29kZSI6IjIzOTgxIiwidGVybV9uYW1lIjoiTE9VSVMgRFJFWUZVUyAoVElNQlVFUykiLCJ0ZXJtX2hhcnZlc3QiOnRydWUsInRlcm1fY2FyZCI6dHJ1ZSwibmFtZWlkIjoyNCwidW5pcXVlX25hbWUiOiJmYWJpby5vbGl2aWVyaSIsInNzaWQiOjEyMTAzLCJuYmYiOjE1ODEzNjM1MDUsImV4cCI6MTU4MTQwNjcwNSwiaWF0IjoxNTgxMzYzNTA1LCJpc3MiOiJ5YXJkLXVhdC1iYiJ9.0liT2HYfzgEhhSx2e5e3WgUuV0-Eyzj_yLy3e1eqJW8'} 
+data=None 
+json=None</msg>
+<msg timestamp="20200210 16:38:30.157" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200210 16:38:30.124" endtime="20200210 16:38:30.157"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${response.json()}</arg>
+</arguments>
+<assign>
+<var>${RespRecibida}</var>
+</assign>
+<msg timestamp="20200210 16:38:30.158" level="INFO">${RespRecibida} = [{'codigo': '20315333505', 'cuil': '20315333505', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 24295}, {'codigo': '20049703717', 'cuil': '20049703...</msg>
+<status status="PASS" starttime="20200210 16:38:30.158" endtime="20200210 16:38:30.158"></status>
+</kw>
+<kw name="Load JSON From File" library="JSONLibrary">
+<doc>Load JSON from file.</doc>
+<arguments>
+<arg>${FilePathPruebaRodHab}</arg>
+</arguments>
+<assign>
+<var>${RespEsperada}</var>
+</assign>
+<msg timestamp="20200210 16:38:30.160" level="INFO">${RespEsperada} = [{'codigo': '20315333505', 'cuil': '20315333505', 'descripcion': 'RODRIGUEZ', 'habilitado': 'Si', 'penalizado': False, 'estaHabilitado': True, 'id': 24295}, {'codigo': '20377153228', 'cuil': '20377153...</msg>
+<status status="PASS" starttime="20200210 16:38:30.158" endtime="20200210 16:38:30.160"></status>
+</kw>
+<kw name="Lists Should Be Equal" library="Collections">
+<doc>Fails if given lists are unequal.</doc>
+<arguments>
+<arg>${RespRecibida}</arg>
+<arg>${RespEsperada}</arg>
+<arg>value=true</arg>
+</arguments>
+<msg timestamp="20200210 16:38:30.160" level="FAIL">value=true
+Lengths are different: 24 != 25</msg>
+<status status="FAIL" starttime="20200210 16:38:30.160" endtime="20200210 16:38:30.160"></status>
+</kw>
+<status status="FAIL" starttime="20200210 16:38:30.123" endtime="20200210 16:38:30.161" critical="yes">value=true
+Lengths are different: 24 != 25</status>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200210 16:38:30.162" endtime="20200210 16:38:32.225"></status>
+</kw>
+<status status="FAIL" starttime="20200210 16:38:19.422" endtime="20200210 16:38:32.225"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="3">Critical Tests</stat>
+<stat pass="4" fail="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="3" id="s1" name="Choferes">Choferes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
