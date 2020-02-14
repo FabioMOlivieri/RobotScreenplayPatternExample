@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.7.6 on win32)" generated="20200210 17:08:15.007" rpa="false">
-<suite id="s1" name="GestionarCuposToTestTables" source="C:\Users\fabio.olivieri\RobotTesting\RobotScreenplayPatternExample\Tests\UI\Cupo\GestionarCuposToTestTables.robot">
-<kw name="Iniciar Aplicacion" library="Login" type="setup">
+<robot generator="Robot 3.1.2 (Python 3.7.6 on win32)" generated="20200214 10:54:17.357" rpa="false">
+<suite id="s1" name="ATDD" source="C:\Users\fabio.olivieri\RobotTesting\RobotScreenplayPatternExample\Tests\UI\Cupo\ATDD.robot">
+<test id="s1-t1" name="Scenario: Probar formato ATDD">
+<kw name="Given El usuario Administrador ingresa a Gestionar Cupo en UAT para Timbues">
+<kw name="Obtener usuario Administrador" library="rol">
+<assign>
+<var>@{UsuPass}</var>
+</assign>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>ldc_yard_app_pool_id</arg>
+<arg>+qHIe`=R1KkwaT|V0"y,</arg>
+</arguments>
+<assign>
+<var>@{UsuPass}</var>
+</assign>
+<msg timestamp="20200214 10:54:17.539" level="INFO">@{UsuPass} = [ ldc_yard_app_pool_id | +qHIe`=R1KkwaT|V0"y, ]</msg>
+<status status="PASS" starttime="20200214 10:54:17.539" endtime="20200214 10:54:17.539"></status>
+</kw>
+<msg timestamp="20200214 10:54:17.539" level="INFO">@{UsuPass} = [ ldc_yard_app_pool_id | +qHIe`=R1KkwaT|V0"y, ]</msg>
+<status status="PASS" starttime="20200214 10:54:17.538" endtime="20200214 10:54:17.539"></status>
+</kw>
+<kw name="Iniciar Aplicacion" library="Login">
 <arguments>
 <arg>${gWebUrlUat}</arg>
 <arg>${gBrowserChrome}</arg>
-<arg>${gUser}</arg>
-<arg>${gContrasenia}</arg>
+<arg>@{UsuPass}[0]</arg>
+<arg>${UsuPass}[1]</arg>
 <arg>${gIDTerminalTimbues}</arg>
 </arguments>
 <kw name="Abrir Navegador" library="Selenium Proxy">
@@ -20,10 +41,10 @@
 <arg>${aURL}</arg>
 <arg>${aBrowser}</arg>
 </arguments>
-<msg timestamp="20200210 17:08:15.181" level="INFO">Opening browser 'chrome' to base url 'http://arrosvmapp313/ldc-yard/login'.</msg>
-<status status="PASS" starttime="20200210 17:08:15.181" endtime="20200210 17:08:19.999"></status>
+<msg timestamp="20200214 10:54:17.540" level="INFO">Opening browser 'chrome' to base url 'http://arrosvmapp313/ldc-yard/login'.</msg>
+<status status="PASS" starttime="20200214 10:54:17.540" endtime="20200214 10:54:21.655"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:15.180" endtime="20200210 17:08:19.999"></status>
+<status status="PASS" starttime="20200214 10:54:17.540" endtime="20200214 10:54:21.656"></status>
 </kw>
 <kw name="Indicar usuario" library="Login">
 <arguments>
@@ -47,7 +68,7 @@
 <arg>${aLocator}</arg>
 <arg>10 seconds</arg>
 </arguments>
-<status status="PASS" starttime="20200210 17:08:20.002" endtime="20200210 17:08:20.015"></status>
+<status status="PASS" starttime="20200214 10:54:21.657" endtime="20200214 10:54:21.668"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -57,11 +78,11 @@
 <assign>
 <var>${aElement}</var>
 </assign>
-<msg timestamp="20200210 17:08:20.016" level="INFO">${aElement} = id:usuario</msg>
-<status status="PASS" starttime="20200210 17:08:20.016" endtime="20200210 17:08:20.016"></status>
+<msg timestamp="20200214 10:54:21.668" level="INFO">${aElement} = id:usuario</msg>
+<status status="PASS" starttime="20200214 10:54:21.668" endtime="20200214 10:54:21.668"></status>
 </kw>
-<msg timestamp="20200210 17:08:20.016" level="INFO">${txtUsuario} = id:usuario</msg>
-<status status="PASS" starttime="20200210 17:08:20.001" endtime="20200210 17:08:20.016"></status>
+<msg timestamp="20200214 10:54:21.668" level="INFO">${txtUsuario} = id:usuario</msg>
+<status status="PASS" starttime="20200214 10:54:21.657" endtime="20200214 10:54:21.668"></status>
 </kw>
 <kw name="Ingresar Texto" library="Selenium Proxy">
 <arguments>
@@ -73,7 +94,7 @@
 <arguments>
 <arg>${aElement}</arg>
 </arguments>
-<status status="PASS" starttime="20200210 17:08:20.017" endtime="20200210 17:08:20.027"></status>
+<status status="PASS" starttime="20200214 10:54:21.669" endtime="20200214 10:54:21.679"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -81,12 +102,12 @@
 <arg>${aElement}</arg>
 <arg>${aText}</arg>
 </arguments>
-<msg timestamp="20200210 17:08:20.028" level="INFO">Typing text 'fabio.olivieri' into text field 'id:usuario'.</msg>
-<status status="PASS" starttime="20200210 17:08:20.027" endtime="20200210 17:08:20.123"></status>
+<msg timestamp="20200214 10:54:21.679" level="INFO">Typing text 'ldc_yard_app_pool_id' into text field 'id:usuario'.</msg>
+<status status="PASS" starttime="20200214 10:54:21.679" endtime="20200214 10:54:21.807"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:20.016" endtime="20200210 17:08:20.123"></status>
+<status status="PASS" starttime="20200214 10:54:21.668" endtime="20200214 10:54:21.807"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:20.000" endtime="20200210 17:08:20.123"></status>
+<status status="PASS" starttime="20200214 10:54:21.656" endtime="20200214 10:54:21.807"></status>
 </kw>
 <kw name="Ingresar Contrasenia" library="Login">
 <arguments>
@@ -105,7 +126,7 @@
 <arg>${aLocator}</arg>
 <arg>10 seconds</arg>
 </arguments>
-<status status="PASS" starttime="20200210 17:08:20.124" endtime="20200210 17:08:20.138"></status>
+<status status="PASS" starttime="20200214 10:54:21.808" endtime="20200214 10:54:21.817"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -115,11 +136,11 @@
 <assign>
 <var>${aElement}</var>
 </assign>
-<msg timestamp="20200210 17:08:20.140" level="INFO">${aElement} = id:contrasenia</msg>
-<status status="PASS" starttime="20200210 17:08:20.139" endtime="20200210 17:08:20.140"></status>
+<msg timestamp="20200214 10:54:21.818" level="INFO">${aElement} = id:contrasenia</msg>
+<status status="PASS" starttime="20200214 10:54:21.818" endtime="20200214 10:54:21.818"></status>
 </kw>
-<msg timestamp="20200210 17:08:20.140" level="INFO">${txtContrasenia} = id:contrasenia</msg>
-<status status="PASS" starttime="20200210 17:08:20.124" endtime="20200210 17:08:20.141"></status>
+<msg timestamp="20200214 10:54:21.818" level="INFO">${txtContrasenia} = id:contrasenia</msg>
+<status status="PASS" starttime="20200214 10:54:21.807" endtime="20200214 10:54:21.818"></status>
 </kw>
 <kw name="Ingresar Password" library="Selenium Proxy">
 <arguments>
@@ -131,7 +152,7 @@
 <arguments>
 <arg>${aElement}</arg>
 </arguments>
-<status status="PASS" starttime="20200210 17:08:20.143" endtime="20200210 17:08:20.156"></status>
+<status status="PASS" starttime="20200214 10:54:21.819" endtime="20200214 10:54:21.831"></status>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <doc>Types the given password into the text field identified by ``locator``.</doc>
@@ -139,12 +160,12 @@
 <arg>${aElement}</arg>
 <arg>${aText}</arg>
 </arguments>
-<msg timestamp="20200210 17:08:20.156" level="INFO">Typing password into text field 'id:contrasenia'.</msg>
-<status status="PASS" starttime="20200210 17:08:20.156" endtime="20200210 17:08:20.231"></status>
+<msg timestamp="20200214 10:54:21.832" level="INFO">Typing password into text field 'id:contrasenia'.</msg>
+<status status="PASS" starttime="20200214 10:54:21.831" endtime="20200214 10:54:21.946"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:20.141" endtime="20200210 17:08:20.231"></status>
+<status status="PASS" starttime="20200214 10:54:21.818" endtime="20200214 10:54:21.946"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:20.123" endtime="20200210 17:08:20.231"></status>
+<status status="PASS" starttime="20200214 10:54:21.807" endtime="20200214 10:54:21.947"></status>
 </kw>
 <kw name="Presionar Ingresar" library="Login">
 <kw name="Capturar Elemento" library="Selenium Proxy">
@@ -160,7 +181,7 @@
 <arg>${aLocator}</arg>
 <arg>10 seconds</arg>
 </arguments>
-<status status="PASS" starttime="20200210 17:08:20.232" endtime="20200210 17:08:20.243"></status>
+<status status="PASS" starttime="20200214 10:54:21.947" endtime="20200214 10:54:21.957"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -170,11 +191,11 @@
 <assign>
 <var>${aElement}</var>
 </assign>
-<msg timestamp="20200210 17:08:20.243" level="INFO">${aElement} = xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button</msg>
-<status status="PASS" starttime="20200210 17:08:20.243" endtime="20200210 17:08:20.244"></status>
+<msg timestamp="20200214 10:54:21.958" level="INFO">${aElement} = xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button</msg>
+<status status="PASS" starttime="20200214 10:54:21.958" endtime="20200214 10:54:21.958"></status>
 </kw>
-<msg timestamp="20200210 17:08:20.244" level="INFO">${btnIngresar} = xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button</msg>
-<status status="PASS" starttime="20200210 17:08:20.232" endtime="20200210 17:08:20.244"></status>
+<msg timestamp="20200214 10:54:21.958" level="INFO">${btnIngresar} = xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button</msg>
+<status status="PASS" starttime="20200214 10:54:21.947" endtime="20200214 10:54:21.958"></status>
 </kw>
 <kw name="Presionar Boton" library="Selenium Proxy">
 <arguments>
@@ -185,21 +206,21 @@
 <arguments>
 <arg>${aElement}</arg>
 </arguments>
-<status status="PASS" starttime="20200210 17:08:20.245" endtime="20200210 17:08:20.254"></status>
+<status status="PASS" starttime="20200214 10:54:21.958" endtime="20200214 10:54:21.982"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${aElement}</arg>
 </arguments>
-<msg timestamp="20200210 17:08:20.254" level="INFO">Clicking element 'xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button'.</msg>
-<status status="PASS" starttime="20200210 17:08:20.254" endtime="20200210 17:08:21.161"></status>
+<msg timestamp="20200214 10:54:21.983" level="INFO">Clicking element 'xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button'.</msg>
+<status status="PASS" starttime="20200214 10:54:21.982" endtime="20200214 10:54:22.372"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:20.244" endtime="20200210 17:08:21.161"></status>
+<status status="PASS" starttime="20200214 10:54:21.958" endtime="20200214 10:54:22.372"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:20.232" endtime="20200210 17:08:21.161"></status>
+<status status="PASS" starttime="20200214 10:54:21.947" endtime="20200214 10:54:22.373"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:20.000" endtime="20200210 17:08:21.161"></status>
+<status status="PASS" starttime="20200214 10:54:21.656" endtime="20200214 10:54:22.373"></status>
 </kw>
 <kw name="Indicar Terminal" library="Login">
 <arguments>
@@ -222,7 +243,7 @@
 <arg>${aLocator}</arg>
 <arg>10 seconds</arg>
 </arguments>
-<status status="PASS" starttime="20200210 17:08:21.163" endtime="20200210 17:08:21.387"></status>
+<status status="PASS" starttime="20200214 10:54:22.374" endtime="20200214 10:54:22.595"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -232,11 +253,11 @@
 <assign>
 <var>${aElement}</var>
 </assign>
-<msg timestamp="20200210 17:08:21.388" level="INFO">${aElement} = id:selectTerminal</msg>
-<status status="PASS" starttime="20200210 17:08:21.387" endtime="20200210 17:08:21.388"></status>
+<msg timestamp="20200214 10:54:22.595" level="INFO">${aElement} = id:selectTerminal</msg>
+<status status="PASS" starttime="20200214 10:54:22.595" endtime="20200214 10:54:22.595"></status>
 </kw>
-<msg timestamp="20200210 17:08:21.388" level="INFO">${ddlTerminal} = id:selectTerminal</msg>
-<status status="PASS" starttime="20200210 17:08:21.163" endtime="20200210 17:08:21.388"></status>
+<msg timestamp="20200214 10:54:22.595" level="INFO">${ddlTerminal} = id:selectTerminal</msg>
+<status status="PASS" starttime="20200214 10:54:22.374" endtime="20200214 10:54:22.595"></status>
 </kw>
 <kw name="Elegir Opcion Lista Por Valor" library="Selenium Proxy">
 <arguments>
@@ -249,12 +270,12 @@
 <arg>${aElement}</arg>
 <arg>${aValue}</arg>
 </arguments>
-<msg timestamp="20200210 17:08:21.388" level="INFO">Selecting options from selection list 'id:selectTerminal' by value 137.</msg>
-<status status="PASS" starttime="20200210 17:08:21.388" endtime="20200210 17:08:21.451"></status>
+<msg timestamp="20200214 10:54:22.596" level="INFO">Selecting options from selection list 'id:selectTerminal' by value 137.</msg>
+<status status="PASS" starttime="20200214 10:54:22.596" endtime="20200214 10:54:22.658"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:21.388" endtime="20200210 17:08:21.451"></status>
+<status status="PASS" starttime="20200214 10:54:22.596" endtime="20200214 10:54:22.658"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:21.162" endtime="20200210 17:08:21.451"></status>
+<status status="PASS" starttime="20200214 10:54:22.373" endtime="20200214 10:54:22.658"></status>
 </kw>
 <kw name="Presionar Ingresar" library="Login">
 <kw name="Capturar Elemento" library="Selenium Proxy">
@@ -270,7 +291,7 @@
 <arg>${aLocator}</arg>
 <arg>10 seconds</arg>
 </arguments>
-<status status="PASS" starttime="20200210 17:08:21.452" endtime="20200210 17:08:21.459"></status>
+<status status="PASS" starttime="20200214 10:54:22.659" endtime="20200214 10:54:22.666"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -280,11 +301,11 @@
 <assign>
 <var>${aElement}</var>
 </assign>
-<msg timestamp="20200210 17:08:21.459" level="INFO">${aElement} = xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button</msg>
-<status status="PASS" starttime="20200210 17:08:21.459" endtime="20200210 17:08:21.459"></status>
+<msg timestamp="20200214 10:54:22.666" level="INFO">${aElement} = xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button</msg>
+<status status="PASS" starttime="20200214 10:54:22.666" endtime="20200214 10:54:22.666"></status>
 </kw>
-<msg timestamp="20200210 17:08:21.459" level="INFO">${btnIngresar} = xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button</msg>
-<status status="PASS" starttime="20200210 17:08:21.452" endtime="20200210 17:08:21.459"></status>
+<msg timestamp="20200214 10:54:22.666" level="INFO">${btnIngresar} = xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button</msg>
+<status status="PASS" starttime="20200214 10:54:22.658" endtime="20200214 10:54:22.666"></status>
 </kw>
 <kw name="Presionar Boton" library="Selenium Proxy">
 <arguments>
@@ -295,33 +316,30 @@
 <arguments>
 <arg>${aElement}</arg>
 </arguments>
-<status status="PASS" starttime="20200210 17:08:21.460" endtime="20200210 17:08:21.471"></status>
+<status status="PASS" starttime="20200214 10:54:22.667" endtime="20200214 10:54:22.693"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${aElement}</arg>
 </arguments>
-<msg timestamp="20200210 17:08:21.472" level="INFO">Clicking element 'xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button'.</msg>
-<status status="PASS" starttime="20200210 17:08:21.471" endtime="20200210 17:08:21.823"></status>
+<msg timestamp="20200214 10:54:22.694" level="INFO">Clicking element 'xpath:/html/body/yrd-root/yrd-login/div[1]/div/form/div[3]/button'.</msg>
+<status status="PASS" starttime="20200214 10:54:22.693" endtime="20200214 10:54:22.783"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:21.459" endtime="20200210 17:08:21.823"></status>
+<status status="PASS" starttime="20200214 10:54:22.666" endtime="20200214 10:54:22.783"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:21.451" endtime="20200210 17:08:21.823"></status>
+<status status="PASS" starttime="20200214 10:54:22.658" endtime="20200214 10:54:22.783"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:21.162" endtime="20200210 17:08:21.823"></status>
+<status status="PASS" starttime="20200214 10:54:22.373" endtime="20200214 10:54:22.783"></status>
 </kw>
 <kw name="Guardar Token" library="Login">
-<kw name="Esperar 5 segundos" library="Selenium Proxy">
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>${aSeconds}</arg>
+<arg>5</arg>
 </arguments>
-<msg timestamp="20200210 17:08:26.834" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20200210 17:08:21.824" endtime="20200210 17:08:26.834"></status>
-</kw>
-<status status="PASS" starttime="20200210 17:08:21.823" endtime="20200210 17:08:26.834"></status>
+<msg timestamp="20200214 10:54:27.793" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200214 10:54:22.783" endtime="20200214 10:54:27.793"></status>
 </kw>
 <kw name="Devolver valor local storage" library="Selenium Proxy">
 <arguments>
@@ -338,16 +356,17 @@
 <assign>
 <var>${valor}</var>
 </assign>
-<msg timestamp="20200210 17:08:26.836" level="INFO">Executing JavaScript:
+<msg timestamp="20200214 10:54:27.794" level="INFO">Executing JavaScript:
 return window.localStorage.getItem("YardToken")
 Without any arguments.</msg>
-<msg timestamp="20200210 17:08:26.841" level="INFO">${valor} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDIEFSR0VOVElOQSBTLkEuIiwidGV...</msg>
-<status status="PASS" starttime="20200210 17:08:26.835" endtime="20200210 17:08:26.841"></status>
+<msg timestamp="20200214 10:54:27.800" level="INFO">${valor} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDIEFSR0VOVElOQSBTLkEuIiwidGV...</msg>
+<status status="PASS" starttime="20200214 10:54:27.794" endtime="20200214 10:54:27.800"></status>
 </kw>
-<msg timestamp="20200210 17:08:26.841" level="INFO">${localStorageToken} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDIEFSR0VOVElOQSBTLkEuIiwidGV...</msg>
-<status status="PASS" starttime="20200210 17:08:26.834" endtime="20200210 17:08:26.841"></status>
+<msg timestamp="20200214 10:54:27.800" level="INFO">${localStorageToken} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDIEFSR0VOVElOQSBTLkEuIiwidGV...</msg>
+<status status="PASS" starttime="20200214 10:54:27.793" endtime="20200214 10:54:27.800"></status>
 </kw>
-<kw name="Concatenar textos" library="Selenium Proxy">
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
 <arguments>
 <arg>Bearer</arg>
 <arg>${localStorageToken}</arg>
@@ -355,20 +374,8 @@ Without any arguments.</msg>
 <assign>
 <var>${BearerToken}</var>
 </assign>
-<kw name="Catenate" library="BuiltIn">
-<doc>Catenates the given items together and returns the resulted string.</doc>
-<arguments>
-<arg>${aText1}</arg>
-<arg>${aText2}</arg>
-</arguments>
-<assign>
-<var>${result}</var>
-</assign>
-<msg timestamp="20200210 17:08:26.842" level="INFO">${result} = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDIEFSR0VOVElOQSBTLkEu...</msg>
-<status status="PASS" starttime="20200210 17:08:26.842" endtime="20200210 17:08:26.842"></status>
-</kw>
-<msg timestamp="20200210 17:08:26.842" level="INFO">${BearerToken} = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDIEFSR0VOVElOQSBTLkEu...</msg>
-<status status="PASS" starttime="20200210 17:08:26.841" endtime="20200210 17:08:26.842"></status>
+<msg timestamp="20200214 10:54:27.800" level="INFO">${BearerToken} = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDIEFSR0VOVElOQSBTLkEu...</msg>
+<status status="PASS" starttime="20200214 10:54:27.800" endtime="20200214 10:54:27.800"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
@@ -376,15 +383,14 @@ Without any arguments.</msg>
 <arg>${gAutToken}</arg>
 <arg>${BearerToken}</arg>
 </arguments>
-<msg timestamp="20200210 17:08:26.843" level="INFO">${gAutToken} = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDIEFSR0VOVElOQSBTLkEu...</msg>
-<status status="PASS" starttime="20200210 17:08:26.842" endtime="20200210 17:08:26.843"></status>
+<msg timestamp="20200214 10:54:27.801" level="INFO">${gAutToken} = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3Jrc2lkIjo4LCJzaXRlaWQiOjIsInNpdGVfYWxpYXMiOjIsInNpdGVfbmFtZSI6IlJvc2FyaW8iLCJzaXRlX3doIjpmYWxzZSwic29jaWQiOjEsInNvY19uYW1lIjoiTERDIEFSR0VOVElOQSBTLkEu...</msg>
+<status status="PASS" starttime="20200214 10:54:27.800" endtime="20200214 10:54:27.801"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:21.823" endtime="20200210 17:08:26.843"></status>
+<status status="PASS" starttime="20200214 10:54:22.783" endtime="20200214 10:54:27.801"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:15.180" endtime="20200210 17:08:26.843"></status>
+<status status="PASS" starttime="20200214 10:54:17.539" endtime="20200214 10:54:27.801"></status>
 </kw>
-<test id="s1-t1" name="TestTable">
-<kw name="Ir a Gestionar Cupo" library="Menu">
+<kw name="Ir a Validar Cupo" library="Menu">
 <kw name="Ir a SubMenu Cupo" library="Menu">
 <kw name="Seleccionar Opcion Menu o SubMenu" library="Menu">
 <arguments>
@@ -403,7 +409,7 @@ Without any arguments.</msg>
 <arg>${aLocator}</arg>
 <arg>10 seconds</arg>
 </arguments>
-<status status="PASS" starttime="20200210 17:08:26.845" endtime="20200210 17:08:26.856"></status>
+<status status="PASS" starttime="20200214 10:54:27.802" endtime="20200214 10:54:27.812"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -413,11 +419,11 @@ Without any arguments.</msg>
 <assign>
 <var>${aElement}</var>
 </assign>
-<msg timestamp="20200210 17:08:26.856" level="INFO">${aElement} = id:dropdownMenuButton</msg>
-<status status="PASS" starttime="20200210 17:08:26.856" endtime="20200210 17:08:26.857"></status>
+<msg timestamp="20200214 10:54:27.813" level="INFO">${aElement} = id:dropdownMenuButton</msg>
+<status status="PASS" starttime="20200214 10:54:27.813" endtime="20200214 10:54:27.813"></status>
 </kw>
-<msg timestamp="20200210 17:08:26.857" level="INFO">${btn} = id:dropdownMenuButton</msg>
-<status status="PASS" starttime="20200210 17:08:26.845" endtime="20200210 17:08:26.857"></status>
+<msg timestamp="20200214 10:54:27.813" level="INFO">${btn} = id:dropdownMenuButton</msg>
+<status status="PASS" starttime="20200214 10:54:27.802" endtime="20200214 10:54:27.813"></status>
 </kw>
 <kw name="Presionar Boton" library="Selenium Proxy">
 <arguments>
@@ -428,19 +434,19 @@ Without any arguments.</msg>
 <arguments>
 <arg>${aElement}</arg>
 </arguments>
-<status status="PASS" starttime="20200210 17:08:26.857" endtime="20200210 17:08:26.869"></status>
+<status status="PASS" starttime="20200214 10:54:27.814" endtime="20200214 10:54:27.825"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${aElement}</arg>
 </arguments>
-<msg timestamp="20200210 17:08:26.870" level="INFO">Clicking element 'id:dropdownMenuButton'.</msg>
-<status status="PASS" starttime="20200210 17:08:26.869" endtime="20200210 17:08:26.976"></status>
+<msg timestamp="20200214 10:54:27.825" level="INFO">Clicking element 'id:dropdownMenuButton'.</msg>
+<status status="PASS" starttime="20200214 10:54:27.825" endtime="20200214 10:54:27.919"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:26.857" endtime="20200210 17:08:26.977"></status>
+<status status="PASS" starttime="20200214 10:54:27.813" endtime="20200214 10:54:27.919"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:26.845" endtime="20200210 17:08:26.977"></status>
+<status status="PASS" starttime="20200214 10:54:27.802" endtime="20200214 10:54:27.919"></status>
 </kw>
 <kw name="Seleccionar Opcion Menu o SubMenu" library="Menu">
 <arguments>
@@ -459,7 +465,7 @@ Without any arguments.</msg>
 <arg>${aLocator}</arg>
 <arg>10 seconds</arg>
 </arguments>
-<status status="PASS" starttime="20200210 17:08:26.977" endtime="20200210 17:08:26.991"></status>
+<status status="PASS" starttime="20200214 10:54:27.920" endtime="20200214 10:54:27.931"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -469,11 +475,11 @@ Without any arguments.</msg>
 <assign>
 <var>${aElement}</var>
 </assign>
-<msg timestamp="20200210 17:08:26.992" level="INFO">${aElement} = xpath: //*[contains(text(), "Cupo")]</msg>
-<status status="PASS" starttime="20200210 17:08:26.992" endtime="20200210 17:08:26.992"></status>
+<msg timestamp="20200214 10:54:27.932" level="INFO">${aElement} = xpath: //*[contains(text(), "Cupo")]</msg>
+<status status="PASS" starttime="20200214 10:54:27.931" endtime="20200214 10:54:27.932"></status>
 </kw>
-<msg timestamp="20200210 17:08:26.992" level="INFO">${btn} = xpath: //*[contains(text(), "Cupo")]</msg>
-<status status="PASS" starttime="20200210 17:08:26.977" endtime="20200210 17:08:26.992"></status>
+<msg timestamp="20200214 10:54:27.932" level="INFO">${btn} = xpath: //*[contains(text(), "Cupo")]</msg>
+<status status="PASS" starttime="20200214 10:54:27.920" endtime="20200214 10:54:27.932"></status>
 </kw>
 <kw name="Presionar Boton" library="Selenium Proxy">
 <arguments>
@@ -484,25 +490,25 @@ Without any arguments.</msg>
 <arguments>
 <arg>${aElement}</arg>
 </arguments>
-<status status="PASS" starttime="20200210 17:08:26.993" endtime="20200210 17:08:27.005"></status>
+<status status="PASS" starttime="20200214 10:54:27.932" endtime="20200214 10:54:27.945"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${aElement}</arg>
 </arguments>
-<msg timestamp="20200210 17:08:27.005" level="INFO">Clicking element 'xpath: //*[contains(text(), "Cupo")]'.</msg>
-<status status="PASS" starttime="20200210 17:08:27.005" endtime="20200210 17:08:27.475"></status>
+<msg timestamp="20200214 10:54:27.945" level="INFO">Clicking element 'xpath: //*[contains(text(), "Cupo")]'.</msg>
+<status status="PASS" starttime="20200214 10:54:27.945" endtime="20200214 10:54:28.553"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:26.992" endtime="20200210 17:08:27.475"></status>
+<status status="PASS" starttime="20200214 10:54:27.932" endtime="20200214 10:54:28.554"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:26.977" endtime="20200210 17:08:27.475"></status>
+<status status="PASS" starttime="20200214 10:54:27.919" endtime="20200214 10:54:28.554"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:26.844" endtime="20200210 17:08:27.475"></status>
+<status status="PASS" starttime="20200214 10:54:27.802" endtime="20200214 10:54:28.554"></status>
 </kw>
 <kw name="Seleccionar Opcion Menu o SubMenu" library="Menu">
 <arguments>
-<arg>${locBtnGestionarCupo}</arg>
+<arg>${locBtnValidarCupo}</arg>
 </arguments>
 <kw name="Capturar Elemento" library="Selenium Proxy">
 <arguments>
@@ -517,7 +523,7 @@ Without any arguments.</msg>
 <arg>${aLocator}</arg>
 <arg>10 seconds</arg>
 </arguments>
-<status status="PASS" starttime="20200210 17:08:27.476" endtime="20200210 17:08:27.486"></status>
+<status status="PASS" starttime="20200214 10:54:28.555" endtime="20200214 10:54:28.565"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -527,11 +533,11 @@ Without any arguments.</msg>
 <assign>
 <var>${aElement}</var>
 </assign>
-<msg timestamp="20200210 17:08:27.487" level="INFO">${aElement} = xpath: //*[contains(text(), "Gestionar Cupo")]</msg>
-<status status="PASS" starttime="20200210 17:08:27.487" endtime="20200210 17:08:27.487"></status>
+<msg timestamp="20200214 10:54:28.565" level="INFO">${aElement} = xpath: //*[contains(text(), "Validar Cupo")]</msg>
+<status status="PASS" starttime="20200214 10:54:28.565" endtime="20200214 10:54:28.565"></status>
 </kw>
-<msg timestamp="20200210 17:08:27.487" level="INFO">${btn} = xpath: //*[contains(text(), "Gestionar Cupo")]</msg>
-<status status="PASS" starttime="20200210 17:08:27.476" endtime="20200210 17:08:27.487"></status>
+<msg timestamp="20200214 10:54:28.566" level="INFO">${btn} = xpath: //*[contains(text(), "Validar Cupo")]</msg>
+<status status="PASS" starttime="20200214 10:54:28.554" endtime="20200214 10:54:28.566"></status>
 </kw>
 <kw name="Presionar Boton" library="Selenium Proxy">
 <arguments>
@@ -542,33 +548,38 @@ Without any arguments.</msg>
 <arguments>
 <arg>${aElement}</arg>
 </arguments>
-<status status="PASS" starttime="20200210 17:08:27.487" endtime="20200210 17:08:27.498"></status>
+<status status="PASS" starttime="20200214 10:54:28.566" endtime="20200214 10:54:28.576"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${aElement}</arg>
 </arguments>
-<msg timestamp="20200210 17:08:27.498" level="INFO">Clicking element 'xpath: //*[contains(text(), "Gestionar Cupo")]'.</msg>
-<status status="PASS" starttime="20200210 17:08:27.498" endtime="20200210 17:08:27.730"></status>
+<msg timestamp="20200214 10:54:28.576" level="INFO">Clicking element 'xpath: //*[contains(text(), "Validar Cupo")]'.</msg>
+<status status="PASS" starttime="20200214 10:54:28.576" endtime="20200214 10:54:29.457"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:27.487" endtime="20200210 17:08:27.730"></status>
+<status status="PASS" starttime="20200214 10:54:28.566" endtime="20200214 10:54:29.457"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:27.476" endtime="20200210 17:08:27.730"></status>
+<status status="PASS" starttime="20200214 10:54:28.554" endtime="20200214 10:54:29.457"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:26.844" endtime="20200210 17:08:27.730"></status>
+<status status="PASS" starttime="20200214 10:54:27.802" endtime="20200214 10:54:29.457"></status>
 </kw>
-<kw name="Consultar cupo segun doc porte" library="Gestionar Cupos">
+<status status="PASS" starttime="20200214 10:54:17.538" endtime="20200214 10:54:29.457"></status>
+</kw>
+<kw name="When Ingresar Carta de porte sin cupo" library="Validar Cupo">
 <arguments>
-<arg>453453453453</arg>
+<arg>123456789</arg>
 </arguments>
-<kw name="Presionar Buscar" library="Gestionar Cupos">
+<kw name="Ingresar Documento Porte" library="Validar Cupo">
+<arguments>
+<arg>${nroDocPorte}</arg>
+</arguments>
 <kw name="Capturar Elemento" library="Selenium Proxy">
 <arguments>
-<arg>${locBtnBuscar}</arg>
+<arg>${locTxtDocPorte}</arg>
 </arguments>
 <assign>
-<var>${btnBuscar}</var>
+<var>${txtDocPorte}</var>
 </assign>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -576,7 +587,7 @@ Without any arguments.</msg>
 <arg>${aLocator}</arg>
 <arg>10 seconds</arg>
 </arguments>
-<status status="PASS" starttime="20200210 17:08:27.732" endtime="20200210 17:08:27.744"></status>
+<status status="PASS" starttime="20200214 10:54:29.459" endtime="20200214 10:54:29.480"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -586,265 +597,44 @@ Without any arguments.</msg>
 <assign>
 <var>${aElement}</var>
 </assign>
-<msg timestamp="20200210 17:08:27.744" level="INFO">${aElement} = xpath:/html/body/yrd-root/yrd-home/yrd-gestionar-cupos/form/fieldset/yrd-search-form-template/fieldset[1]/div/button[1]</msg>
-<status status="PASS" starttime="20200210 17:08:27.744" endtime="20200210 17:08:27.744"></status>
+<msg timestamp="20200214 10:54:29.480" level="INFO">${aElement} = //*[@id="validarCupoSection"]/form/yrd-documento-porte/fieldset/div[1]/div[2]/yrd-texto-mascara-con-etiqueta/div/div/input</msg>
+<status status="PASS" starttime="20200214 10:54:29.480" endtime="20200214 10:54:29.480"></status>
 </kw>
-<msg timestamp="20200210 17:08:27.744" level="INFO">${btnBuscar} = xpath:/html/body/yrd-root/yrd-home/yrd-gestionar-cupos/form/fieldset/yrd-search-form-template/fieldset[1]/div/button[1]</msg>
-<status status="PASS" starttime="20200210 17:08:27.731" endtime="20200210 17:08:27.744"></status>
+<msg timestamp="20200214 10:54:29.480" level="INFO">${txtDocPorte} = //*[@id="validarCupoSection"]/form/yrd-documento-porte/fieldset/div[1]/div[2]/yrd-texto-mascara-con-etiqueta/div/div/input</msg>
+<status status="PASS" starttime="20200214 10:54:29.458" endtime="20200214 10:54:29.480"></status>
 </kw>
-<kw name="Presionar Boton" library="Selenium Proxy">
+<kw name="Ingresar Texto" library="Selenium Proxy">
 <arguments>
-<arg>${btnBuscar}</arg>
+<arg>${txtDocPorte}</arg>
+<arg>${aNroDocPorte}</arg>
 </arguments>
 <kw name="Set Focus To Element" library="SeleniumLibrary">
 <doc>Sets the focus to the element identified by ``locator``.</doc>
 <arguments>
 <arg>${aElement}</arg>
 </arguments>
-<status status="PASS" starttime="20200210 17:08:27.745" endtime="20200210 17:08:27.760"></status>
+<status status="PASS" starttime="20200214 10:54:29.481" endtime="20200214 10:54:29.492"></status>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
 <arg>${aElement}</arg>
+<arg>${aText}</arg>
 </arguments>
-<msg timestamp="20200210 17:08:27.760" level="INFO">Clicking element 'xpath:/html/body/yrd-root/yrd-home/yrd-gestionar-cupos/form/fieldset/yrd-search-form-template/fieldset[1]/div/button[1]'.</msg>
-<status status="PASS" starttime="20200210 17:08:27.760" endtime="20200210 17:08:28.506"></status>
+<msg timestamp="20200214 10:54:29.492" level="INFO">Typing text '123456789' into text field '//*[@id="validarCupoSection"]/form/yrd-documento-porte/fieldset/div[1]/div[2]/yrd-texto-mascara-con-etiqueta/div/div/input'.</msg>
+<status status="PASS" starttime="20200214 10:54:29.492" endtime="20200214 10:54:29.706"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:27.745" endtime="20200210 17:08:28.506"></status>
+<status status="PASS" starttime="20200214 10:54:29.480" endtime="20200214 10:54:29.706"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:27.731" endtime="20200210 17:08:28.506"></status>
+<status status="PASS" starttime="20200214 10:54:29.458" endtime="20200214 10:54:29.706"></status>
 </kw>
-<kw name="Esperar 3 segundos" library="Selenium Proxy">
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>${aSeconds}</arg>
-</arguments>
-<msg timestamp="20200210 17:08:31.519" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20200210 17:08:28.507" endtime="20200210 17:08:31.520"></status>
-</kw>
-<status status="PASS" starttime="20200210 17:08:28.506" endtime="20200210 17:08:31.520"></status>
-</kw>
-<kw name="Obtener Cantidad Filas" library="Gestionar Cupos">
-<assign>
-<var>${cantFilas}</var>
-</assign>
-<kw name="Get Element Count" library="SeleniumLibrary">
-<doc>Returns the number of elements matching ``locator``.</doc>
-<arguments>
-<arg>${locFila}</arg>
-</arguments>
-<assign>
-<var>${cantFilas}</var>
-</assign>
-<msg timestamp="20200210 17:08:31.533" level="INFO">${cantFilas} = 5</msg>
-<status status="PASS" starttime="20200210 17:08:31.520" endtime="20200210 17:08:31.533"></status>
-</kw>
-<msg timestamp="20200210 17:08:31.533" level="INFO">${cantFilas} = 5</msg>
-<status status="PASS" starttime="20200210 17:08:31.520" endtime="20200210 17:08:31.533"></status>
-</kw>
-<kw name="${i} IN RANGE [ 1 | ${cantFilas}+1 ]" type="for">
-<kw name="${i} = 1" type="foritem">
-<kw name="Obtener Valor Celda" library="Gestionar Cupos">
-<arguments>
-<arg>${i}</arg>
-<arg>4</arg>
-</arguments>
-<assign>
-<var>${celda}</var>
-</assign>
-<kw name="Catenate" library="BuiltIn">
-<doc>Catenates the given items together and returns the resulted string.</doc>
-<arguments>
-<arg>${locFila}</arg>
-<arg>[</arg>
-<arg>${aFila}</arg>
-<arg>]</arg>
-<arg>${locColumna}</arg>
-<arg>[</arg>
-<arg>${aColumna} ]</arg>
-</arguments>
-<assign>
-<var>${locCelda}</var>
-</assign>
-<msg timestamp="20200210 17:08:31.534" level="INFO">${locCelda} = xpath:/html/body/yrd-root/yrd-home/yrd-gestionar-cupos/form/fieldset/yrd-search-form-template/fieldset[2]/yrd-data-grid/div/ngx-datatable/div/datatable-body/datatable-selection/datatable-scroller/data...</msg>
-<status status="PASS" starttime="20200210 17:08:31.534" endtime="20200210 17:08:31.534"></status>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<arguments>
-<arg>${locCelda}</arg>
-</arguments>
-<assign>
-<var>${celda}</var>
-</assign>
-<msg timestamp="20200210 17:08:31.558" level="INFO">${celda} = 443534567657</msg>
-<status status="PASS" starttime="20200210 17:08:31.534" endtime="20200210 17:08:31.558"></status>
-</kw>
-<msg timestamp="20200210 17:08:31.558" level="INFO">${celda} = 443534567657</msg>
-<status status="PASS" starttime="20200210 17:08:31.534" endtime="20200210 17:08:31.558"></status>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<arguments>
-<arg>${celda}==${nroDocPorte}</arg>
-</arguments>
-<status status="PASS" starttime="20200210 17:08:31.559" endtime="20200210 17:08:31.559"></status>
-</kw>
-<status status="PASS" starttime="20200210 17:08:31.533" endtime="20200210 17:08:31.559"></status>
-</kw>
-<kw name="${i} = 2" type="foritem">
-<kw name="Obtener Valor Celda" library="Gestionar Cupos">
-<arguments>
-<arg>${i}</arg>
-<arg>4</arg>
-</arguments>
-<assign>
-<var>${celda}</var>
-</assign>
-<kw name="Catenate" library="BuiltIn">
-<doc>Catenates the given items together and returns the resulted string.</doc>
-<arguments>
-<arg>${locFila}</arg>
-<arg>[</arg>
-<arg>${aFila}</arg>
-<arg>]</arg>
-<arg>${locColumna}</arg>
-<arg>[</arg>
-<arg>${aColumna} ]</arg>
-</arguments>
-<assign>
-<var>${locCelda}</var>
-</assign>
-<msg timestamp="20200210 17:08:31.560" level="INFO">${locCelda} = xpath:/html/body/yrd-root/yrd-home/yrd-gestionar-cupos/form/fieldset/yrd-search-form-template/fieldset[2]/yrd-data-grid/div/ngx-datatable/div/datatable-body/datatable-selection/datatable-scroller/data...</msg>
-<status status="PASS" starttime="20200210 17:08:31.559" endtime="20200210 17:08:31.560"></status>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<arguments>
-<arg>${locCelda}</arg>
-</arguments>
-<assign>
-<var>${celda}</var>
-</assign>
-<msg timestamp="20200210 17:08:31.582" level="INFO">${celda} = 453453453345</msg>
-<status status="PASS" starttime="20200210 17:08:31.560" endtime="20200210 17:08:31.582"></status>
-</kw>
-<msg timestamp="20200210 17:08:31.583" level="INFO">${celda} = 453453453345</msg>
-<status status="PASS" starttime="20200210 17:08:31.559" endtime="20200210 17:08:31.583"></status>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<arguments>
-<arg>${celda}==${nroDocPorte}</arg>
-</arguments>
-<status status="PASS" starttime="20200210 17:08:31.583" endtime="20200210 17:08:31.583"></status>
-</kw>
-<status status="PASS" starttime="20200210 17:08:31.559" endtime="20200210 17:08:31.583"></status>
-</kw>
-<kw name="${i} = 3" type="foritem">
-<kw name="Obtener Valor Celda" library="Gestionar Cupos">
-<arguments>
-<arg>${i}</arg>
-<arg>4</arg>
-</arguments>
-<assign>
-<var>${celda}</var>
-</assign>
-<kw name="Catenate" library="BuiltIn">
-<doc>Catenates the given items together and returns the resulted string.</doc>
-<arguments>
-<arg>${locFila}</arg>
-<arg>[</arg>
-<arg>${aFila}</arg>
-<arg>]</arg>
-<arg>${locColumna}</arg>
-<arg>[</arg>
-<arg>${aColumna} ]</arg>
-</arguments>
-<assign>
-<var>${locCelda}</var>
-</assign>
-<msg timestamp="20200210 17:08:31.584" level="INFO">${locCelda} = xpath:/html/body/yrd-root/yrd-home/yrd-gestionar-cupos/form/fieldset/yrd-search-form-template/fieldset[2]/yrd-data-grid/div/ngx-datatable/div/datatable-body/datatable-selection/datatable-scroller/data...</msg>
-<status status="PASS" starttime="20200210 17:08:31.584" endtime="20200210 17:08:31.584"></status>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<arguments>
-<arg>${locCelda}</arg>
-</arguments>
-<assign>
-<var>${celda}</var>
-</assign>
-<msg timestamp="20200210 17:08:31.607" level="INFO">${celda} = 453453453453</msg>
-<status status="PASS" starttime="20200210 17:08:31.584" endtime="20200210 17:08:31.607"></status>
-</kw>
-<msg timestamp="20200210 17:08:31.607" level="INFO">${celda} = 453453453453</msg>
-<status status="PASS" starttime="20200210 17:08:31.583" endtime="20200210 17:08:31.607"></status>
-</kw>
-<kw name="Exit For Loop If" library="BuiltIn">
-<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<arguments>
-<arg>${celda}==${nroDocPorte}</arg>
-</arguments>
-<msg timestamp="20200210 17:08:31.608" level="INFO">Exiting for loop altogether.</msg>
-<status status="PASS" starttime="20200210 17:08:31.607" endtime="20200210 17:08:31.608"></status>
-</kw>
-<status status="PASS" starttime="20200210 17:08:31.583" endtime="20200210 17:08:31.608"></status>
-</kw>
-<status status="PASS" starttime="20200210 17:08:31.533" endtime="20200210 17:08:31.608"></status>
-</kw>
-<kw name="Seleccionar Fila" library="Gestionar Cupos">
-<arguments>
-<arg>${i}</arg>
-</arguments>
-<kw name="Catenate" library="BuiltIn">
-<doc>Catenates the given items together and returns the resulted string.</doc>
-<arguments>
-<arg>${locFila}</arg>
-<arg>[</arg>
-<arg>${aFila}</arg>
-<arg>]</arg>
-<arg>${locColumna}</arg>
-<arg>[1] ${locCheckbox}</arg>
-</arguments>
-<assign>
-<var>${seleccion}</var>
-</assign>
-<msg timestamp="20200210 17:08:31.608" level="INFO">${seleccion} = xpath:/html/body/yrd-root/yrd-home/yrd-gestionar-cupos/form/fieldset/yrd-search-form-template/fieldset[2]/yrd-data-grid/div/ngx-datatable/div/datatable-body/datatable-selection/datatable-scroller/data...</msg>
-<status status="PASS" starttime="20200210 17:08:31.608" endtime="20200210 17:08:31.609"></status>
-</kw>
-<kw name="Presionar Boton" library="Selenium Proxy">
-<arguments>
-<arg>${seleccion}</arg>
-</arguments>
-<kw name="Set Focus To Element" library="SeleniumLibrary">
-<doc>Sets the focus to the element identified by ``locator``.</doc>
-<arguments>
-<arg>${aElement}</arg>
-</arguments>
-<status status="PASS" starttime="20200210 17:08:31.609" endtime="20200210 17:08:31.625"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${aElement}</arg>
-</arguments>
-<msg timestamp="20200210 17:08:31.625" level="INFO">Clicking element 'xpath:/html/body/yrd-root/yrd-home/yrd-gestionar-cupos/form/fieldset/yrd-search-form-template/fieldset[2]/yrd-data-grid/div/ngx-datatable/div/datatable-body/datatable-selection/datatable-scroller/datatable-row-wrapper [ 3 ] /datatable-body-row/div[2]/datatable-body-cell [1] /div/label/input'.</msg>
-<status status="PASS" starttime="20200210 17:08:31.625" endtime="20200210 17:08:31.708"></status>
-</kw>
-<status status="PASS" starttime="20200210 17:08:31.609" endtime="20200210 17:08:31.708"></status>
-</kw>
-<status status="PASS" starttime="20200210 17:08:31.608" endtime="20200210 17:08:31.709"></status>
-</kw>
-<kw name="Presionar Consultar" library="Gestionar Cupos">
+<kw name="Seleccionar Sin Cupo" library="Validar Cupo">
 <kw name="Capturar Elemento" library="Selenium Proxy">
 <arguments>
-<arg>${locBtnConsultar}</arg>
+<arg>${locOptSinCupo}</arg>
 </arguments>
 <assign>
-<var>${btnConsultar}</var>
+<var>${OptSinCupo}</var>
 </assign>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -852,7 +642,7 @@ Without any arguments.</msg>
 <arg>${aLocator}</arg>
 <arg>10 seconds</arg>
 </arguments>
-<status status="PASS" starttime="20200210 17:08:31.710" endtime="20200210 17:08:31.723"></status>
+<status status="PASS" starttime="20200214 10:54:29.706" endtime="20200214 10:54:29.715"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -862,47 +652,185 @@ Without any arguments.</msg>
 <assign>
 <var>${aElement}</var>
 </assign>
-<msg timestamp="20200210 17:08:31.723" level="INFO">${aElement} = xpath:/html/body/yrd-root/yrd-home/yrd-gestionar-cupos/form/fieldset/yrd-search-form-template/fieldset[3]/div[2]/button[2]</msg>
-<status status="PASS" starttime="20200210 17:08:31.723" endtime="20200210 17:08:31.723"></status>
+<msg timestamp="20200214 10:54:29.716" level="INFO">${aElement} = //*[@id="radioSinCupo"]</msg>
+<status status="PASS" starttime="20200214 10:54:29.716" endtime="20200214 10:54:29.716"></status>
 </kw>
-<msg timestamp="20200210 17:08:31.724" level="INFO">${btnConsultar} = xpath:/html/body/yrd-root/yrd-home/yrd-gestionar-cupos/form/fieldset/yrd-search-form-template/fieldset[3]/div[2]/button[2]</msg>
-<status status="PASS" starttime="20200210 17:08:31.710" endtime="20200210 17:08:31.724"></status>
+<msg timestamp="20200214 10:54:29.716" level="INFO">${OptSinCupo} = //*[@id="radioSinCupo"]</msg>
+<status status="PASS" starttime="20200214 10:54:29.706" endtime="20200214 10:54:29.716"></status>
 </kw>
 <kw name="Presionar Boton" library="Selenium Proxy">
 <arguments>
-<arg>${btnConsultar}</arg>
+<arg>${OptSinCupo}</arg>
 </arguments>
 <kw name="Set Focus To Element" library="SeleniumLibrary">
 <doc>Sets the focus to the element identified by ``locator``.</doc>
 <arguments>
 <arg>${aElement}</arg>
 </arguments>
-<status status="PASS" starttime="20200210 17:08:31.724" endtime="20200210 17:08:31.738"></status>
+<status status="PASS" starttime="20200214 10:54:29.716" endtime="20200214 10:54:29.732"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${aElement}</arg>
 </arguments>
-<msg timestamp="20200210 17:08:31.738" level="INFO">Clicking element 'xpath:/html/body/yrd-root/yrd-home/yrd-gestionar-cupos/form/fieldset/yrd-search-form-template/fieldset[3]/div[2]/button[2]'.</msg>
-<status status="PASS" starttime="20200210 17:08:31.738" endtime="20200210 17:08:32.049"></status>
+<msg timestamp="20200214 10:54:29.732" level="INFO">Clicking element '//*[@id="radioSinCupo"]'.</msg>
+<status status="PASS" starttime="20200214 10:54:29.732" endtime="20200214 10:54:30.053"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:31.724" endtime="20200210 17:08:32.049"></status>
+<status status="PASS" starttime="20200214 10:54:29.716" endtime="20200214 10:54:30.053"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:31.709" endtime="20200210 17:08:32.049"></status>
+<status status="PASS" starttime="20200214 10:54:29.706" endtime="20200214 10:54:30.053"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:27.731" endtime="20200210 17:08:32.049"></status>
+<status status="PASS" starttime="20200214 10:54:29.458" endtime="20200214 10:54:30.054"></status>
 </kw>
-<status status="PASS" starttime="20200210 17:08:26.843" endtime="20200210 17:08:32.050" critical="yes"></status>
+<kw name="AND Cancelar ingreso cupo" library="Validar Cupo">
+<kw name="Scrollear Hasta Final Pagina" library="Selenium Proxy">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,document.body.scrollHeight)</arg>
+</arguments>
+<msg timestamp="20200214 10:54:30.055" level="INFO">Executing JavaScript:
+window.scrollTo(0,document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20200214 10:54:30.055" endtime="20200214 10:54:30.061"></status>
+</kw>
+<status status="PASS" starttime="20200214 10:54:30.054" endtime="20200214 10:54:30.061"></status>
+</kw>
+<kw name="Presionar Cancelar" library="Validar Cupo">
+<kw name="Capturar Elemento" library="Selenium Proxy">
+<arguments>
+<arg>${locBtnCancelar}</arg>
+</arguments>
+<assign>
+<var>${btnCancelar}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200214 10:54:30.062" endtime="20200214 10:54:30.082"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+</arguments>
+<assign>
+<var>${aElement}</var>
+</assign>
+<msg timestamp="20200214 10:54:30.083" level="INFO">${aElement} = //*[@id="validarCupoSection"]/div/div[2]/button[2]</msg>
+<status status="PASS" starttime="20200214 10:54:30.083" endtime="20200214 10:54:30.083"></status>
+</kw>
+<msg timestamp="20200214 10:54:30.084" level="INFO">${btnCancelar} = //*[@id="validarCupoSection"]/div/div[2]/button[2]</msg>
+<status status="PASS" starttime="20200214 10:54:30.062" endtime="20200214 10:54:30.084"></status>
+</kw>
+<kw name="Scrollear Hasta Final Pagina" library="Selenium Proxy">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,document.body.scrollHeight)</arg>
+</arguments>
+<msg timestamp="20200214 10:54:30.085" level="INFO">Executing JavaScript:
+window.scrollTo(0,document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20200214 10:54:30.084" endtime="20200214 10:54:30.089"></status>
+</kw>
+<status status="PASS" starttime="20200214 10:54:30.084" endtime="20200214 10:54:30.089"></status>
+</kw>
+<kw name="Presionar Boton" library="Selenium Proxy">
+<arguments>
+<arg>${btnCancelar}</arg>
+</arguments>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<status status="PASS" starttime="20200214 10:54:30.090" endtime="20200214 10:54:30.104"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<msg timestamp="20200214 10:54:30.104" level="INFO">Clicking element '//*[@id="validarCupoSection"]/div/div[2]/button[2]'.</msg>
+<status status="PASS" starttime="20200214 10:54:30.104" endtime="20200214 10:54:30.371"></status>
+</kw>
+<status status="PASS" starttime="20200214 10:54:30.089" endtime="20200214 10:54:30.372"></status>
+</kw>
+<status status="PASS" starttime="20200214 10:54:30.061" endtime="20200214 10:54:30.372"></status>
+</kw>
+<kw name="Presionar No en Confirmacion" library="Validar Cupo">
+<kw name="Capturar Elemento" library="Selenium Proxy">
+<arguments>
+<arg>${locBtnConfNO}</arg>
+</arguments>
+<assign>
+<var>${btnConfNO}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+<arg>10 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200214 10:54:30.372" endtime="20200214 10:54:30.382"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${aLocator}</arg>
+</arguments>
+<assign>
+<var>${aElement}</var>
+</assign>
+<msg timestamp="20200214 10:54:30.383" level="INFO">${aElement} = xpath:/html/body/yrd-root/jaspero-confirmations/jaspero-confirmation/div[2]/div[3]/button[2]</msg>
+<status status="PASS" starttime="20200214 10:54:30.382" endtime="20200214 10:54:30.383"></status>
+</kw>
+<msg timestamp="20200214 10:54:30.383" level="INFO">${btnConfNO} = xpath:/html/body/yrd-root/jaspero-confirmations/jaspero-confirmation/div[2]/div[3]/button[2]</msg>
+<status status="PASS" starttime="20200214 10:54:30.372" endtime="20200214 10:54:30.383"></status>
+</kw>
+<kw name="Presionar Boton" library="Selenium Proxy">
+<arguments>
+<arg>${btnConfNO}</arg>
+</arguments>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<status status="PASS" starttime="20200214 10:54:30.383" endtime="20200214 10:54:30.394"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${aElement}</arg>
+</arguments>
+<msg timestamp="20200214 10:54:30.394" level="INFO">Clicking element 'xpath:/html/body/yrd-root/jaspero-confirmations/jaspero-confirmation/div[2]/div[3]/button[2]'.</msg>
+<status status="PASS" starttime="20200214 10:54:30.394" endtime="20200214 10:54:30.484"></status>
+</kw>
+<status status="PASS" starttime="20200214 10:54:30.383" endtime="20200214 10:54:30.484"></status>
+</kw>
+<status status="PASS" starttime="20200214 10:54:30.372" endtime="20200214 10:54:30.484"></status>
+</kw>
+<status status="PASS" starttime="20200214 10:54:30.054" endtime="20200214 10:54:30.484"></status>
+</kw>
+<kw name="Then El msj debe ser">
+<kw name="Cerrar Pantalla" library="Selenium Proxy">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200214 10:54:30.485" endtime="20200214 10:54:32.664"></status>
+</kw>
+<status status="PASS" starttime="20200214 10:54:30.485" endtime="20200214 10:54:32.665"></status>
+</kw>
+<status status="PASS" starttime="20200214 10:54:30.484" endtime="20200214 10:54:32.665"></status>
+</kw>
+<status status="PASS" starttime="20200214 10:54:17.537" endtime="20200214 10:54:32.666" critical="yes"></status>
 </test>
-<kw name="Cerrar Todo" library="Selenium Proxy" type="teardown">
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20200210 17:08:32.051" endtime="20200210 17:08:34.214"></status>
-</kw>
-<status status="PASS" starttime="20200210 17:08:32.051" endtime="20200210 17:08:34.214"></status>
-</kw>
-<status status="PASS" starttime="20200210 17:08:15.008" endtime="20200210 17:08:34.214"></status>
+<status status="PASS" starttime="20200214 10:54:17.358" endtime="20200214 10:54:32.669"></status>
 </suite>
 <statistics>
 <total>
@@ -912,7 +840,7 @@ Without any arguments.</msg>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="GestionarCuposToTestTables">GestionarCuposToTestTables</stat>
+<stat pass="1" fail="0" id="s1" name="ATDD">ATDD</stat>
 </suite>
 </statistics>
 <errors>
